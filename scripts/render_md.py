@@ -4,6 +4,7 @@ import json
 import re
 from collections import defaultdict
 from datetime import date
+from html import escape
 from pathlib import Path
 
 
@@ -31,16 +32,17 @@ def front_matter(title: str, layout: str = "default") -> str:
 
 
 def paper_markdown(paper: dict) -> str:
-    authors = ", ".join(paper.get("authors", [])) or "Unknown authors"
-    keywords = ", ".join(paper.get("keywords", [])) or "None"
-    topics = ", ".join(paper.get("topics", [])) or "Uncategorized"
-    doi = paper.get("doi", "")
+    title = escape(paper.get("title", "Untitled paper"))
+    authors = escape(", ".join(paper.get("authors", [])) or "Unknown authors")
+    keywords = escape(", ".join(paper.get("keywords", [])) or "None")
+    topics = escape(", ".join(paper.get("topics", [])) or "Uncategorized")
+    doi = escape(paper.get("doi", ""))
     url = paper.get("url") or (f"https://doi.org/{doi}" if doi else "")
-    abstract = paper.get("abstract", "")
-    date_text = paper.get("date", "Unknown date")
-    journal = paper.get("journal", "Journal of the Mechanics and Physics of Solids")
-    volume = paper.get("volume", "")
-    article_number = paper.get("article_number", "")
+    abstract = escape(paper.get("abstract", ""))
+    date_text = escape(paper.get("date", "Unknown date"))
+    journal = escape(paper.get("journal", "Journal of the Mechanics and Physics of Solids"))
+    volume = escape(paper.get("volume", ""))
+    article_number = escape(paper.get("article_number", ""))
 
     journal_bits = [journal]
     if volume:
@@ -48,13 +50,12 @@ def paper_markdown(paper: dict) -> str:
     if article_number:
         journal_bits.append(f"Article {article_number}")
 
-    link = f"[Publisher Link]({url})" if url else ""
+    link = f'<p><a href="{escape(url)}">Publisher Link</a></p>' if url else ""
 
     return "\n".join(
         [
             '<article class="paper">',
-            f"## {paper.get('title', 'Untitled paper')}",
-            "",
+            f"<h2>{title}</h2>",
             f'<p class="meta"><strong>Authors:</strong> {authors}</p>',
             f'<p class="meta"><strong>Date:</strong> {date_text}</p>',
             f'<p class="meta"><strong>Journal:</strong> {" - ".join(journal_bits)}</p>',
@@ -62,8 +63,7 @@ def paper_markdown(paper: dict) -> str:
             f'<p class="meta"><strong>Keywords:</strong> {keywords}</p>',
             f'<p class="meta"><strong>Topics:</strong> {topics}</p>',
             "",
-            abstract,
-            "",
+            f"<p>{abstract}</p>" if abstract else "",
             link,
             "</article>",
             "",

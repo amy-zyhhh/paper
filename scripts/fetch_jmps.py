@@ -47,7 +47,17 @@ def parse_args() -> argparse.Namespace:
         "--days",
         type=int,
         default=365,
-        help="Only fetch papers published in the last N days.",
+        help="Only fetch papers published in the last N days. Ignored if --from-date is set.",
+    )
+    parser.add_argument(
+        "--from-date",
+        default="",
+        help="Fetch papers published on or after this date, in YYYY-MM-DD format.",
+    )
+    parser.add_argument(
+        "--until-date",
+        default="",
+        help="Fetch papers published on or before this date, in YYYY-MM-DD format.",
     )
     parser.add_argument(
         "--mailto",
@@ -65,6 +75,15 @@ def parse_args() -> argparse.Namespace:
         help="Fetch and summarize results without writing data/papers.json.",
     )
     return parser.parse_args()
+
+
+def validate_date(value: str, option_name: str) -> str:
+    if not value:
+        return ""
+    try:
+        return date.fromisoformat(value).isoformat()
+    except ValueError:
+        raise SystemExit(f"{option_name} must use YYYY-MM-DD format, got: {value}")
 
 
 def request_json(url: str) -> dict[str, Any]:
@@ -175,10 +194,25 @@ def normalize_item(item: dict[str, Any]) -> dict[str, Any] | None:
     }
 
 
-def build_crossref_url(limit: int, days: int, mailto: str) -> str:
-    from_date = (date.today() - timedelta(days=days)).isoformat()
+def build_crossref_url(
+    limit: int,
+    days: int,
+    mailto: str,
+    from_date: str = "",
+    until_date: str = "",
+) -> str:
+    from_date = validate_date(from_date, "--from-date")
+    until_date = validate_date(until_date, "--until-date")
+
+    if not from_date:
+        from_date = (date.today() - timedelta(days=days)).isoformat()
+
+    filters = [f"from-pub-date:{from_date}", "type:journal-article"]
+    if until_date:
+        filters.append(f"until-pub-date:{until_date}")
+
     params = {
-        "filter": f"from-pub-date:{from_date},type:journal-article",
+        "filter": ",".join(filters),
         "sort": "published",
         "order": "desc",
         "rows": str(limit),
@@ -249,7 +283,13 @@ def save_papers(papers: list[dict[str, Any]]) -> None:
 
 def main() -> int:
     args = parse_args()
-    url = build_crossref_url(args.limit, args.days, args.mailto)
+    url = build_crossref_url(
+        args.limit,
+        args.days,
+        args.mailto,
+        args.from_date,
+        args.until_date,
+    )
 
     try:
         payload = request_json(url)

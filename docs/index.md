@@ -11,8 +11,7 @@ Last updated: 2026-07-01
 Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 
 <article class="paper">
-## An analytical self-consistent theory for the elastic moduli of granular materials
-
+<h2>An analytical self-consistent theory for the elastic moduli of granular materials</h2>
 <p class="meta"><strong>Authors:</strong> Ge Duan, Chaofa Zhao, Zhongxuan Yang</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106733</p>
@@ -21,13 +20,11 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> mechanics</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106733)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106733">Publisher Link</a></p>
 </article>
 
 <article class="paper">
-## A parametric study of slow dynamic nonlinear elasticity with comparisons to models
-
+<h2>A parametric study of slow dynamic nonlinear elasticity with comparisons to models</h2>
 <p class="meta"><strong>Authors:</strong> Richard L. Weaver, John Y. Yoritomo</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106727</p>
@@ -36,13 +33,11 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> mechanics</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106727)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106727">Publisher Link</a></p>
 </article>
 
 <article class="paper">
-## Nonreciprocal transition waves in active lattices
-
+<h2>Nonreciprocal transition waves in active lattices</h2>
 <p class="meta"><strong>Authors:</strong> Yao Zhang, Chengxuan Zhai, Zhanfeng Li, Jiahao Li, Guangjin Mou, Lizichen Chen, Yangkun Du, Michel Destrade, Changguo Wang, Yafei Wang</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106697</p>
@@ -51,13 +46,11 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> metamaterials</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106697)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106697">Publisher Link</a></p>
 </article>
 
 <article class="paper">
-## Classification of rotational zero modes in 2D micropolar solids
-
+<h2>Classification of rotational zero modes in 2D micropolar solids</h2>
 <p class="meta"><strong>Authors:</strong> Dingxin Sun, Yi Chen, Gengkai Hu</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106704</p>
@@ -66,13 +59,11 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> mechanics</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106704)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106704">Publisher Link</a></p>
 </article>
 
 <article class="paper">
-## Graph-field framework for fracture mechanics of architected lattice materials
-
+<h2>Graph-field framework for fracture mechanics of architected lattice materials</h2>
 <p class="meta"><strong>Authors:</strong> Yang Gao, Junjie Liu, Xiaoding Wei</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106729</p>
@@ -81,13 +72,11 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> fracture, mechanics, metamaterials</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106729)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106729">Publisher Link</a></p>
 </article>
 
 <article class="paper">
-## Taming leaky waves in fluid-loaded thin structures via space- and time-modulated metamaterials
-
+<h2>Taming leaky waves in fluid-loaded thin structures via space- and time-modulated metamaterials</h2>
 <p class="meta"><strong>Authors:</strong> Emanuele Riva, Alper Erturk</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106721</p>
@@ -96,13 +85,11 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> metamaterials</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106721)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106721">Publisher Link</a></p>
 </article>
 
 <article class="paper">
-## Fast dispersion analysis of layered and periodic composite beams via a traction-continuity-preserving mixed finite element formulation
-
+<h2>Fast dispersion analysis of layered and periodic composite beams via a traction-continuity-preserving mixed finite element formulation</h2>
 <p class="meta"><strong>Authors:</strong> Jiaqing Jiang, Zhan Shi, Weiqiu Chen, Marco Amabili</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106725</p>
@@ -111,13 +98,11 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> computational mechanics</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106725)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106725">Publisher Link</a></p>
 </article>
 
 <article class="paper">
-## Discontinuous plasticity in Sn single crystals: a combined experiment and modelling study
-
+<h2>Discontinuous plasticity in Sn single crystals: a combined experiment and modelling study</h2>
 <p class="meta"><strong>Authors:</strong> Hai Xin, Tianhong Gu, Finn Giuliani, T. Ben Britton, Mei Zhan, Yilun Xu, Zebang Zheng</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106714</p>
@@ -126,13 +111,11 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> plasticity</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106714)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106714">Publisher Link</a></p>
 </article>
 
 <article class="paper">
-## Fabric evolution modeling for granular materials under various monotonic and cyclic stress paths accounting for nonproportionality
-
+<h2>Fabric evolution modeling for granular materials under various monotonic and cyclic stress paths accounting for nonproportionality</h2>
 <p class="meta"><strong>Authors:</strong> Rui Wang, Weibin Mo, Qi Liu, Jian-Min Zhang, Yannis F. Dafalias</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106728</p>
@@ -141,13 +124,11 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> mechanics</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106728)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106728">Publisher Link</a></p>
 </article>
 
 <article class="paper">
-## Unifying mean-field models through the method of multiscale virtual power and its dual formulation
-
+<h2>Unifying mean-field models through the method of multiscale virtual power and its dual formulation</h2>
 <p class="meta"><strong>Authors:</strong> José L.P. Vila-Chã, António M. Couto Carneiro, Bernardo P. Ferreira, F.M. Andrade Pires</p>
 <p class="meta"><strong>Date:</strong> 2026-09-01</p>
 <p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106724</p>
@@ -156,6 +137,5 @@ Recent papers tracked from Journal of the Mechanics and Physics of Solids.
 <p class="meta"><strong>Topics:</strong> mechanics</p>
 
 
-
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106724)
+<p><a href="https://doi.org/10.1016/j.jmps.2026.106724">Publisher Link</a></p>
 </article>
