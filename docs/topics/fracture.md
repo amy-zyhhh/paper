@@ -15,8 +15,9 @@ title: Topic - fracture
 <p class="meta"><strong>Keywords:</strong> architected, fracture, lattice, mechanics</p>
 <p class="meta"><strong>Topics:</strong> fracture, mechanics, metamaterials</p>
 
-
+<p>Fracture in architected lattice materials challenges classical Linear Elastic Fracture Mechanics (LEFM) due to the breakdown of scale separation and the dominance of discrete topological effects. This study establishes a rigorous Graph-Field (GF) framework that bridges discrete topology and continuum theory by mapping nodal equilibrium directly to partial differential equations via a vanishing-cell-size limit. Unlike phenomenological homogenization, the GF approach explicitly captures architecture-induced anomalous couplings and non-affine kinematics without empirical fitting. We reveal that distinct topological hierarchies (i.e., single-level versus dual-level architectures) and internal kinematic constraints fundamentally reshape near-tip kinematic fields, generating unconventional deformation patterns missed by standard orthotropic models. Furthermore, a parameter-free criterion based on maximum principal strain is shown to accurately predict kinked crack trajectories, by identifying the physical “weakest link” within the network. Finally, using Eshelby’s configurational mechanics, we derive a path-independent crack driving force. This metric reveals that standard ASTM fracture testing protocols intrinsically smooth out localized kinematics and can severely overestimate the toughness of highly constrained, dual-level lattices. Ultimately, the GF framework provides a thermodynamically consistent foundation for the experimental characterization, generative inverse design, and broad multi-scale exploration of complex structural metamaterials.</p>
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106729">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -30,6 +31,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106705">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -43,6 +45,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106736">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -56,6 +59,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106695">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -69,6 +73,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106504">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -82,6 +87,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106495">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -95,6 +101,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106516">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -108,6 +115,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106428">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -121,6 +129,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106469">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -134,6 +143,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106431">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -147,6 +157,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106494">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -160,6 +171,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106458">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -173,6 +185,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106479">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -186,6 +199,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106483">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -199,6 +213,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106063">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -212,6 +227,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106047">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -225,6 +241,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106038">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -238,6 +255,7 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106044">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -251,4 +269,5 @@ title: Topic - fracture
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2024.105978">Publisher Link</a></p>
+
 </article>

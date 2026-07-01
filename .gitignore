@@ -2,3 +2,6 @@ docs/_site/
 docs/.jekyll-cache/
 docs/.sass-cache/
 docs/.bundle/
+__pycache__/
+*.pyc
+private/

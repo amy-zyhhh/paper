@@ -17,6 +17,7 @@ title: Topic - homogenization
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106519">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -30,6 +31,7 @@ title: Topic - homogenization
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106502">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -43,4 +45,5 @@ title: Topic - homogenization
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106048">Publisher Link</a></p>
+
 </article>

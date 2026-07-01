@@ -17,6 +17,7 @@ title: Topic - plasticity
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106714">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -30,6 +31,7 @@ title: Topic - plasticity
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106722">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -43,6 +45,7 @@ title: Topic - plasticity
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106730">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -56,6 +59,7 @@ title: Topic - plasticity
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106482">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -69,6 +73,7 @@ title: Topic - plasticity
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106503">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -82,6 +87,7 @@ title: Topic - plasticity
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106044">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -95,4 +101,5 @@ title: Topic - plasticity
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2024.105978">Publisher Link</a></p>
+
 </article>

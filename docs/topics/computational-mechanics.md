@@ -17,6 +17,7 @@ title: Topic - computational mechanics
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106725">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -30,6 +31,7 @@ title: Topic - computational mechanics
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106703">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -43,6 +45,7 @@ title: Topic - computational mechanics
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106730">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -56,6 +59,7 @@ title: Topic - computational mechanics
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106469">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -69,6 +73,7 @@ title: Topic - computational mechanics
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106486">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -82,6 +87,7 @@ title: Topic - computational mechanics
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106496">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -95,6 +101,7 @@ title: Topic - computational mechanics
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106062">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -108,4 +115,5 @@ title: Topic - computational mechanics
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106038">Publisher Link</a></p>
+
 </article>

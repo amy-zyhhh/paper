@@ -17,6 +17,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106701">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -30,6 +31,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106699">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -43,6 +45,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106501">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -56,6 +59,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2026.106504">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -69,6 +73,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106477">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -82,6 +87,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106412">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -95,6 +101,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106430">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -108,6 +115,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106464">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -121,6 +129,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106075">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -134,6 +143,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106066">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -147,6 +157,7 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106061">Publisher Link</a></p>
+
 </article>
 
 <article class="paper">
@@ -160,4 +171,5 @@ title: Topic - soft matter
 
 
 <p><a href="https://doi.org/10.1016/j.jmps.2025.106045">Publisher Link</a></p>
+
 </article>
