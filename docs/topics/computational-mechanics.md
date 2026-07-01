@@ -1,0 +1,22 @@
+---
+layout: default
+title: Topic - computational mechanics
+---
+
+
+# computational mechanics
+
+<article class="paper">
+## A phase-field model for fracture in soft solids under finite deformation
+
+<p class="meta"><strong>Authors:</strong> Lina Zhang, Wei Chen, Michael Ortiz</p>
+<p class="meta"><strong>Date:</strong> 2026-07-01</p>
+<p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 198 - Article 105432</p>
+<p class="meta"><strong>DOI:</strong> 10.1016/j.jmps.2026.105432</p>
+<p class="meta"><strong>Keywords:</strong> fracture, phase-field, soft solids, finite deformation</p>
+<p class="meta"><strong>Topics:</strong> fracture, computational mechanics</p>
+
+This paper presents a phase-field formulation for fracture in soft solids undergoing large deformation, with emphasis on crack nucleation, propagation, and the coupling between nonlinear elasticity and damage evolution.
+
+[Publisher Link](https://doi.org/10.1016/j.jmps.2026.105432)
+</article>

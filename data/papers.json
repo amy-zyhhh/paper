@@ -1,0 +1,83 @@
+[
+  {
+    "title": "A phase-field model for fracture in soft solids under finite deformation",
+    "authors": [
+      "Lina Zhang",
+      "Wei Chen",
+      "Michael Ortiz"
+    ],
+    "doi": "10.1016/j.jmps.2026.105432",
+    "date": "2026-07-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "198",
+    "article_number": "105432",
+    "url": "https://doi.org/10.1016/j.jmps.2026.105432",
+    "abstract": "This paper presents a phase-field formulation for fracture in soft solids undergoing large deformation, with emphasis on crack nucleation, propagation, and the coupling between nonlinear elasticity and damage evolution.",
+    "keywords": [
+      "fracture",
+      "phase-field",
+      "soft solids",
+      "finite deformation"
+    ],
+    "topics": [
+      "fracture",
+      "computational mechanics"
+    ],
+    "source": "test-data",
+    "added_at": "2026-07-01T00:00:00Z"
+  },
+  {
+    "title": "Data-driven homogenization of architected metamaterials with nonlinear microstructure",
+    "authors": [
+      "Arjun Patel",
+      "Sofia Martinez",
+      "Ellen Kuhl"
+    ],
+    "doi": "10.1016/j.jmps.2026.105433",
+    "date": "2026-06-24",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "197",
+    "article_number": "105433",
+    "url": "https://doi.org/10.1016/j.jmps.2026.105433",
+    "abstract": "A data-driven framework is developed for predicting the effective response of architected metamaterials with nonlinear microstructural behavior. The method combines numerical homogenization with reduced-order surrogate modeling.",
+    "keywords": [
+      "metamaterials",
+      "homogenization",
+      "data-driven mechanics",
+      "surrogate modeling"
+    ],
+    "topics": [
+      "metamaterials",
+      "homogenization"
+    ],
+    "source": "test-data",
+    "added_at": "2026-07-01T00:00:00Z"
+  },
+  {
+    "title": "Crystal plasticity analysis of size effects in gradient nanostructured metals",
+    "authors": [
+      "Yuki Tanaka",
+      "Ming Li",
+      "Robert McMeeking"
+    ],
+    "doi": "10.1016/j.jmps.2026.105434",
+    "date": "2026-06-12",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "197",
+    "article_number": "105434",
+    "url": "https://doi.org/10.1016/j.jmps.2026.105434",
+    "abstract": "The influence of microstructural length scales on the plastic deformation of gradient nanostructured metals is investigated using a crystal plasticity framework with geometrically necessary dislocations.",
+    "keywords": [
+      "crystal plasticity",
+      "size effects",
+      "nanostructured metals",
+      "dislocations"
+    ],
+    "topics": [
+      "plasticity",
+      "dislocations"
+    ],
+    "source": "test-data",
+    "added_at": "2026-07-01T00:00:00Z"
+  }
+]
