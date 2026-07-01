@@ -1,83 +1,658 @@
 [
   {
-    "title": "A phase-field model for fracture in soft solids under finite deformation",
+    "title": "An analytical self-consistent theory for the elastic moduli of granular materials",
     "authors": [
-      "Lina Zhang",
-      "Wei Chen",
-      "Michael Ortiz"
+      "Ge Duan",
+      "Chaofa Zhao",
+      "Zhongxuan Yang"
     ],
-    "doi": "10.1016/j.jmps.2026.105432",
-    "date": "2026-07-01",
+    "doi": "10.1016/j.jmps.2026.106733",
+    "date": "2026-09-01",
     "journal": "Journal of the Mechanics and Physics of Solids",
-    "volume": "198",
-    "article_number": "105432",
-    "url": "https://doi.org/10.1016/j.jmps.2026.105432",
-    "abstract": "This paper presents a phase-field formulation for fracture in soft solids undergoing large deformation, with emphasis on crack nucleation, propagation, and the coupling between nonlinear elasticity and damage evolution.",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106733",
+    "page": "106733",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106733",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "A parametric study of slow dynamic nonlinear elasticity with comparisons to models",
+    "authors": [
+      "Richard L. Weaver",
+      "John Y. Yoritomo"
+    ],
+    "doi": "10.1016/j.jmps.2026.106727",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106727",
+    "page": "106727",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106727",
+    "abstract": "",
     "keywords": [
+      "elasticity"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Nonreciprocal transition waves in active lattices",
+    "authors": [
+      "Yao Zhang",
+      "Chengxuan Zhai",
+      "Zhanfeng Li",
+      "Jiahao Li",
+      "Guangjin Mou",
+      "Lizichen Chen",
+      "Yangkun Du",
+      "Michel Destrade",
+      "Changguo Wang",
+      "Yafei Wang"
+    ],
+    "doi": "10.1016/j.jmps.2026.106697",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106697",
+    "page": "106697",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106697",
+    "abstract": "",
+    "keywords": [
+      "lattice"
+    ],
+    "topics": [
+      "metamaterials"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Classification of rotational zero modes in 2D micropolar solids",
+    "authors": [
+      "Dingxin Sun",
+      "Yi Chen",
+      "Gengkai Hu"
+    ],
+    "doi": "10.1016/j.jmps.2026.106704",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106704",
+    "page": "106704",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106704",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Graph-field framework for fracture mechanics of architected lattice materials",
+    "authors": [
+      "Yang Gao",
+      "Junjie Liu",
+      "Xiaoding Wei"
+    ],
+    "doi": "10.1016/j.jmps.2026.106729",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106729",
+    "page": "106729",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106729",
+    "abstract": "",
+    "keywords": [
+      "architected",
       "fracture",
-      "phase-field",
-      "soft solids",
-      "finite deformation"
+      "lattice",
+      "mechanics"
     ],
     "topics": [
       "fracture",
+      "mechanics",
+      "metamaterials"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Taming leaky waves in fluid-loaded thin structures via space- and time-modulated metamaterials",
+    "authors": [
+      "Emanuele Riva",
+      "Alper Erturk"
+    ],
+    "doi": "10.1016/j.jmps.2026.106721",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106721",
+    "page": "106721",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106721",
+    "abstract": "",
+    "keywords": [
+      "metamaterial",
+      "metamaterials"
+    ],
+    "topics": [
+      "metamaterials"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Fast dispersion analysis of layered and periodic composite beams via a traction-continuity-preserving mixed finite element formulation",
+    "authors": [
+      "Jiaqing Jiang",
+      "Zhan Shi",
+      "Weiqiu Chen",
+      "Marco Amabili"
+    ],
+    "doi": "10.1016/j.jmps.2026.106725",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106725",
+    "page": "106725",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106725",
+    "abstract": "",
+    "keywords": [
+      "finite element"
+    ],
+    "topics": [
       "computational mechanics"
     ],
-    "source": "test-data",
-    "added_at": "2026-07-01T00:00:00Z"
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
   },
   {
-    "title": "Data-driven homogenization of architected metamaterials with nonlinear microstructure",
+    "title": "Discontinuous plasticity in Sn single crystals: a combined experiment and modelling study",
     "authors": [
-      "Arjun Patel",
-      "Sofia Martinez",
-      "Ellen Kuhl"
+      "Hai Xin",
+      "Tianhong Gu",
+      "Finn Giuliani",
+      "T. Ben Britton",
+      "Mei Zhan",
+      "Yilun Xu",
+      "Zebang Zheng"
     ],
-    "doi": "10.1016/j.jmps.2026.105433",
-    "date": "2026-06-24",
+    "doi": "10.1016/j.jmps.2026.106714",
+    "date": "2026-09-01",
     "journal": "Journal of the Mechanics and Physics of Solids",
-    "volume": "197",
-    "article_number": "105433",
-    "url": "https://doi.org/10.1016/j.jmps.2026.105433",
-    "abstract": "A data-driven framework is developed for predicting the effective response of architected metamaterials with nonlinear microstructural behavior. The method combines numerical homogenization with reduced-order surrogate modeling.",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106714",
+    "page": "106714",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106714",
+    "abstract": "",
     "keywords": [
-      "metamaterials",
-      "homogenization",
-      "data-driven mechanics",
-      "surrogate modeling"
+      "plastic",
+      "plasticity"
     ],
     "topics": [
-      "metamaterials",
-      "homogenization"
+      "plasticity"
     ],
-    "source": "test-data",
-    "added_at": "2026-07-01T00:00:00Z"
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
   },
   {
-    "title": "Crystal plasticity analysis of size effects in gradient nanostructured metals",
+    "title": "Fabric evolution modeling for granular materials under various monotonic and cyclic stress paths accounting for nonproportionality",
     "authors": [
-      "Yuki Tanaka",
-      "Ming Li",
-      "Robert McMeeking"
+      "Rui Wang",
+      "Weibin Mo",
+      "Qi Liu",
+      "Jian-Min Zhang",
+      "Yannis F. Dafalias"
     ],
-    "doi": "10.1016/j.jmps.2026.105434",
-    "date": "2026-06-12",
+    "doi": "10.1016/j.jmps.2026.106728",
+    "date": "2026-09-01",
     "journal": "Journal of the Mechanics and Physics of Solids",
-    "volume": "197",
-    "article_number": "105434",
-    "url": "https://doi.org/10.1016/j.jmps.2026.105434",
-    "abstract": "The influence of microstructural length scales on the plastic deformation of gradient nanostructured metals is investigated using a crystal plasticity framework with geometrically necessary dislocations.",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106728",
+    "page": "106728",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106728",
+    "abstract": "",
     "keywords": [
-      "crystal plasticity",
-      "size effects",
-      "nanostructured metals",
-      "dislocations"
+      "stress"
     ],
     "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Unifying mean-field models through the method of multiscale virtual power and its dual formulation",
+    "authors": [
+      "José L.P. Vila-Chã",
+      "António M. Couto Carneiro",
+      "Bernardo P. Ferreira",
+      "F.M. Andrade Pires"
+    ],
+    "doi": "10.1016/j.jmps.2026.106724",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106724",
+    "page": "106724",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106724",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Convergence of phase-field models with emergent discontinuities to CZMs in multidimensional space: A proof via cohesive laws and sharp-crack energy limits",
+    "authors": [
+      "Ye Feng",
+      "Jie Li"
+    ],
+    "doi": "10.1016/j.jmps.2026.106705",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106705",
+    "page": "106705",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106705",
+    "abstract": "",
+    "keywords": [
+      "crack",
+      "phase-field"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Predicting slip transmission in polycrystalline Ni",
+    "authors": [
+      "Rembert D. White",
+      "Yang Su",
+      "Josh Kacher",
+      "Irene J. Beyerlein"
+    ],
+    "doi": "10.1016/j.jmps.2026.106726",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106726",
+    "page": "106726",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106726",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Polydisperse polymer networks with irregular topologies: Mechanics of cross-link distributions",
+    "authors": [
+      "Jason Mulderrig",
+      "Michael Buche",
+      "Matthew Grasinger"
+    ],
+    "doi": "10.1016/j.jmps.2026.106706",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106706",
+    "page": "106706",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106706",
+    "abstract": "",
+    "keywords": [
+      "mechanics"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "A constitutive framework for distortional-mode-dependent failure in soft materials: Tension–compression asymmetry and beyond",
+    "authors": [
+      "Yogesh C. Chandrashekar",
+      "Kshitiz Upadhyay"
+    ],
+    "doi": "10.1016/j.jmps.2026.106700",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106700",
+    "page": "106700",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106700",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Temperature and strain-rate dependence of plasticity in a TiZrHf refractory multi-principal element alloy: Microscopic mechanism and constitutive modeling",
+    "authors": [
+      "Xiaying Ma",
+      "Kerong Ren",
+      "Peiyuan Ma",
+      "Houcheng Xu",
+      "Zhijun Zheng",
+      "Zhibin Li",
+      "Shun Li",
+      "Hang Wang",
+      "Zihan Zhang",
+      "Rong Chen"
+    ],
+    "doi": "10.1016/j.jmps.2026.106722",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106722",
+    "page": "106722",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106722",
+    "abstract": "",
+    "keywords": [
+      "plastic",
       "plasticity",
-      "dislocations"
+      "strain"
     ],
-    "source": "test-data",
-    "added_at": "2026-07-01T00:00:00Z"
+    "topics": [
+      "mechanics",
+      "plasticity"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Cohesive fracture in dual complementary space: The variational Bulk-Crack Decomposition (BCD) theory",
+    "authors": [
+      "Jian-Ying Wu",
+      "Qing Xia",
+      "Yuheng Zhuang",
+      "Yuli Huang"
+    ],
+    "doi": "10.1016/j.jmps.2026.106736",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106736",
+    "page": "106736",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106736",
+    "abstract": "",
+    "keywords": [
+      "crack",
+      "fracture"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "A micro-macroscopic constitutive model for spatial confinement hydrogels incorporating directional chain slippage and crosslinking distance evolution",
+    "authors": [
+      "Yunqiang Hu",
+      "Zhaoguo Gao",
+      "Fei Jia",
+      "Yanju Liu",
+      "Jinsong Leng"
+    ],
+    "doi": "10.1016/j.jmps.2026.106701",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106701",
+    "page": "106701",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106701",
+    "abstract": "",
+    "keywords": [
+      "gel",
+      "hydrogel"
+    ],
+    "topics": [
+      "soft matter"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "DFENN: A penalty-free variational framework coupling finite elements and neural networks via interface condensation",
+    "authors": [
+      "Chang Wu",
+      "Chang Liu",
+      "Yilin Guo",
+      "Xu Guo"
+    ],
+    "doi": "10.1016/j.jmps.2026.106703",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106703",
+    "page": "106703",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106703",
+    "abstract": "",
+    "keywords": [
+      "finite element"
+    ],
+    "topics": [
+      "computational mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Bulk and surface control of micro-displacements",
+    "authors": [
+      "G. Zurlo",
+      "L. Truskinovsky"
+    ],
+    "doi": "10.1016/j.jmps.2026.106737",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106737",
+    "page": "106737",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106737",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Numerical analysis of Kinetic Monte Carlo algorithms for Shear Transformation Zone plasticity",
+    "authors": [
+      "Vasudevan Kamasamudram",
+      "Nicolas Moës",
+      "Thomas Pardoen"
+    ],
+    "doi": "10.1016/j.jmps.2026.106730",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106730",
+    "page": "106730",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106730",
+    "abstract": "",
+    "keywords": [
+      "numerical",
+      "plastic",
+      "plasticity"
+    ],
+    "topics": [
+      "computational mechanics",
+      "plasticity"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Modelling growth of soft solid as optimal control of nonlocal material manifolds",
+    "authors": [
+      "Ruoyu Huang"
+    ],
+    "doi": "10.1016/j.jmps.2026.106699",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106699",
+    "page": "106699",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106699",
+    "abstract": "",
+    "keywords": [
+      "soft solid"
+    ],
+    "topics": [
+      "soft matter"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "A predictive stochastic continuum framework for concrete subjected to high-velocity impact loading",
+    "authors": [
+      "Sohanjit Ghosh",
+      "Michael A. Homel",
+      "Zhifei Deng",
+      "Ryan C. Hurley"
+    ],
+    "doi": "10.1016/j.jmps.2026.106716",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106716",
+    "page": "106716",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106716",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "Roles of lattice distortion and chemical short-range order in dislocation drag and strain-rate sensitivity over wide strain rates",
+    "authors": [
+      "Guanyu Huang",
+      "Xiaoqing Zhang",
+      "Xuetao Zou",
+      "Kai Wang",
+      "Zhuocheng Xie",
+      "Wu-Rong Jian",
+      "Shuang Qin",
+      "Xiaohu Yao"
+    ],
+    "doi": "10.1016/j.jmps.2026.106723",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106723",
+    "page": "106723",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106723",
+    "abstract": "",
+    "keywords": [
+      "dislocation",
+      "lattice",
+      "strain"
+    ],
+    "topics": [
+      "dislocations",
+      "mechanics",
+      "metamaterials"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "The Mullins effect, mechanical preconditioning, and predictive power",
+    "authors": [
+      "Maximilian P. Wollner",
+      "Gerhard A. Holzapfel"
+    ],
+    "doi": "10.1016/j.jmps.2026.106698",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106698",
+    "page": "106698",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106698",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
+  },
+  {
+    "title": "On asymptotic-stress-amplitude-driven phase field modeling of crack growth in a hyperelastic continuum",
+    "authors": [
+      "Xuan Hu",
+      "Shaofan Li"
+    ],
+    "doi": "10.1016/j.jmps.2026.106695",
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "volume": "215",
+    "issue": "",
+    "article_number": "106695",
+    "page": "106695",
+    "url": "https://doi.org/10.1016/j.jmps.2026.106695",
+    "abstract": "",
+    "keywords": [
+      "crack",
+      "phase field",
+      "stress"
+    ],
+    "topics": [
+      "fracture",
+      "mechanics"
+    ],
+    "source": "crossref",
+    "added_at": "2026-07-01T12:36:55+00:00"
   }
 ]
