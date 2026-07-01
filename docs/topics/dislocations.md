@@ -7,16 +7,16 @@ title: Topic - dislocations
 # dislocations
 
 <article class="paper">
-## Crystal plasticity analysis of size effects in gradient nanostructured metals
+## Roles of lattice distortion and chemical short-range order in dislocation drag and strain-rate sensitivity over wide strain rates
 
-<p class="meta"><strong>Authors:</strong> Yuki Tanaka, Ming Li, Robert McMeeking</p>
-<p class="meta"><strong>Date:</strong> 2026-06-12</p>
-<p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 197 - Article 105434</p>
-<p class="meta"><strong>DOI:</strong> 10.1016/j.jmps.2026.105434</p>
-<p class="meta"><strong>Keywords:</strong> crystal plasticity, size effects, nanostructured metals, dislocations</p>
-<p class="meta"><strong>Topics:</strong> plasticity, dislocations</p>
+<p class="meta"><strong>Authors:</strong> Guanyu Huang, Xiaoqing Zhang, Xuetao Zou, Kai Wang, Zhuocheng Xie, Wu-Rong Jian, Shuang Qin, Xiaohu Yao</p>
+<p class="meta"><strong>Date:</strong> 2026-09-01</p>
+<p class="meta"><strong>Journal:</strong> Journal of the Mechanics and Physics of Solids - Volume 215 - Article 106723</p>
+<p class="meta"><strong>DOI:</strong> 10.1016/j.jmps.2026.106723</p>
+<p class="meta"><strong>Keywords:</strong> dislocation, lattice, strain</p>
+<p class="meta"><strong>Topics:</strong> dislocations, mechanics, metamaterials</p>
 
-The influence of microstructural length scales on the plastic deformation of gradient nanostructured metals is investigated using a crystal plasticity framework with geometrically necessary dislocations.
 
-[Publisher Link](https://doi.org/10.1016/j.jmps.2026.105434)
+
+[Publisher Link](https://doi.org/10.1016/j.jmps.2026.106723)
 </article>
