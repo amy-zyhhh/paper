@@ -1,5 +1,5 @@
-title: JMPS Literature Tracker
-description: Tracking recent papers from Journal of the Mechanics and Physics of Solids
+title: 文献追踪
+description: 跟踪、补全和分析期刊论文
 markdown: kramdown
 theme: null
 baseurl: "/paper"

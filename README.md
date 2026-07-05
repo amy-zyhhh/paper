@@ -1,4 +1,4 @@
-# JMPS 文献追踪与分析网页
+﻿# JMPS 文献追踪与分析网页
 
 这个项目用于追踪 **Journal of the Mechanics and Physics of Solids**
 （JMPS）的文献，抓取论文元数据，补充 Elsevier / ScienceDirect 内容，
@@ -60,7 +60,8 @@ AI 生成的中文分析笔记
 +-- private/
 |   +-- full_text/         # 本地全文，已被 Git 忽略
 +-- scripts/
-|   +-- fetch_jmps.py      # 从 Crossref 抓取 JMPS 元数据
+|   +-- fetch_crossref.py  # 从 Crossref 抓取任意期刊元数据
+|   +-- fetch_jmps.py      # JMPS 专用抓取脚本，兼容旧流程
 |   +-- enrich_elsevier.py # 从 Elsevier 补摘要和全文
 |   +-- analyze_papers.py  # 调用 AI 生成中文分析
 |   +-- render_md.py       # 根据 JSON 生成 Markdown 网页
@@ -101,7 +102,23 @@ $env:OPENAI_MODEL="DeepSeek-V3.2-Thinking"
 cd C:\Users\zhou\Desktop\test
 ```
 
-### 1. 抓取 JMPS 元数据
+### 1. 抓取期刊元数据
+
+推荐使用通用脚本 `fetch_crossref.py`。以后新增期刊时，只需要提供 ISSN 和期刊显示名称。
+
+例如抓取 JMPS：
+
+```powershell
+python scripts\fetch_crossref.py --issn 0022-5096 --journal "Journal of the Mechanics and Physics of Solids" --from-date 2025-01-01 --until-date 2026-07-01 --limit 300
+```
+
+如果要加入另一个期刊，例如某个期刊的 ISSN 是 `1234-5678`：
+
+```powershell
+python scripts\fetch_crossref.py --issn 1234-5678 --journal "Journal Name" --from-date 2025-01-01 --until-date 2026-07-01 --limit 300
+```
+
+旧的 JMPS 专用脚本仍然可用：
 
 按明确日期范围抓取：
 
@@ -234,6 +251,17 @@ python scripts\render_md.py
 docs/index.md
 docs/papers/*.md
 docs/topics/*.md
+docs/search.md
+docs/search-index.json
+```
+
+其中 `docs/search-index.json` 是静态搜索索引，包含标题、作者、期刊、DOI、
+摘要、关键词、主题和 AI 分析文本。搜索页支持：
+
+```text
+全局搜索
+关键词/主题搜索
+作者搜索
 ```
 
 ### 5. 本地预览 Jekyll 网页
@@ -321,7 +349,34 @@ https://USERNAME.github.io/paper/
 
 ## 技术细节
 
+### `scripts/fetch_crossref.py`
+
+通用 Crossref 抓取脚本。适合后续跟踪多个期刊。
+
+基本用法：
+
+```powershell
+python scripts\fetch_crossref.py --issn 0022-5096 --journal "Journal of the Mechanics and Physics of Solids" --from-date 2025-01-01 --until-date 2026-07-01 --limit 300
+```
+
+数据来源：
+
+```text
+Crossref API
+https://api.crossref.org/journals/{ISSN}/works
+```
+
+该脚本会把不同期刊的论文合并到同一个：
+
+```text
+data/papers.json
+```
+
+网页生成时会自动按期刊和月份分组。
+
 ### `scripts/fetch_jmps.py`
+
+JMPS 专用脚本，保留用于兼容之前的工作流。后续更推荐使用 `fetch_crossref.py`。
 
 数据来源：
 
@@ -355,7 +410,7 @@ topics
 ```
 
 其中 `topics` 是脚本根据标题和摘要中的关键词自动匹配得到的。
-规则在 `fetch_jmps.py` 的 `TOPIC_KEYWORDS` 中修改。
+通用抓取流程中，规则在 `fetch_crossref.py` 的 `TOPIC_KEYWORDS` 中修改。
 
 ### `scripts/enrich_elsevier.py`
 
@@ -430,9 +485,12 @@ data/analyses.json
 docs/index.md
 docs/papers/*.md
 docs/topics/*.md
+docs/search.md
+docs/search-index.json
 ```
 
 如果某篇论文有 AI 分析结果，网页会在该论文下面显示 `AI Notes` 区块。
+搜索功能由 `docs/assets/search.js` 在浏览器端完成，不需要服务器。
 
 ## 内容安全建议
 
@@ -464,7 +522,7 @@ API key
 
 ```powershell
 cd C:\Users\zhou\Desktop\test
-python scripts\fetch_jmps.py --from-date 2025-01-01 --until-date 2026-07-01 --limit 300
+python scripts\fetch_crossref.py --issn 0022-5096 --journal "Journal of the Mechanics and Physics of Solids" --from-date 2025-01-01 --until-date 2026-07-01 --limit 300
 python scripts\enrich_elsevier.py --limit 20 --save-full-text
 python scripts\analyze_papers.py --limit 5
 python scripts\render_md.py
@@ -554,3 +612,4 @@ GitHub Actions 定时更新元数据
 
 如果以后要大规模分析全文，建议控制批量大小，先用 `--limit 1`
 测试输出质量，再逐步扩大。
+

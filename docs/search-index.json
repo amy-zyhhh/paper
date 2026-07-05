@@ -1,0 +1,2001 @@
+[
+  {
+    "title": "An analytical self-consistent theory for the elastic moduli of granular materials",
+    "authors": [
+      "Ge Duan",
+      "Chaofa Zhao",
+      "Zhongxuan Yang"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106733",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106733.html",
+    "abstract": "An accurate prediction of the effective elastic moduli from contact-scale properties is essential for multiscale constitutive modelling of granular materials. In the derivation of the moduli from microscopic characteristics, it is crucial that the localisation operator, which expresses relative displacements at contacts in terms of macroscopic deformation, satisfies the kinematic consistency condition. This study develops a self-consistent pair-fluctuation (SC-PF) theory to predict the elastic moduli of two-dimensional isotropic granular assemblies of disk-shaped particles. The theory incorporates an explicitly enforced kinematic consistency condition, leading to a localisation operator that produces relative displacements consistent with the prescribed macroscopic strain, and consequently improved elastic moduli. The proposed SC-PF theory is evaluated using two-dimensional Discrete Element Method (DEM) simulations performed under isotropic compression and pure shear loading. Owing to its enforcement of self-consistency, the SC-PF theory provides substantially improved predictions of both the displacement fluctuations and elastic moduli, across a range of coordination numbers and contact stiffness ratios. In particular, the SC-PF theory improves the prediction of the bulk and shear moduli, with relative deviations reduced by 69% and 65%, respectively, compared with the mean-field theory, and by 22% and 45% compared with the pair-fluctuation approach of Jenkins et al. (2005). Beyond improved accuracy, the SC-PF theory provides insight into how the geometric and mechanical characteristics of interparticle contacts govern macroscopic elastic behaviour, thereby advancing multiscale constitutive modelling of granular materials.",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "文章针对二维各向同性圆盘颗粒组，发展了一种自洽对波动理论，用于从接触尺度特性（如接触刚度、配位数）预测其宏观有效弹性模量（体积模量与剪切模量）。核心任务是构建一个满足运动学一致性条件的局部化算子，以改进现有微观力学理论的预测精度。 从微观特性准确预测宏观弹性模量是颗粒材料多尺度本构建模的关键。现有理论（如平均场理论和Jenkins等人的对波动方法）在构建局部化算子时，未能严格满足运动学一致性条件，即接触点的相对位移与宏观应变之间的一致性关系，这限制了弹性模量预测的准确性。 1. 理论模型：在经典对波动方法框架内，引入自洽概念，为参考接触的邻近接触赋予待定的自洽接触刚度。通过显式地强制执行运动学一致性条件，推导出改进的局部化算子，进而得到宏观弹性模量的解析表达式。2. 验证方法：通过二维离散元法模拟，在等向压缩和纯剪切加载路径下生成不同配位数和接触刚度比的颗粒组，将理论预测的位移波动和弹性模量与DEM结果进行对比，并与平均场理论及Jenkins等人的对波动方法进行定量比较。 理论验证效果显著。相比平均场理论，SC-PF理论对体积模量和剪切模量预测的相对偏差分别降低了69%和65%；相比Jenkins等人的对波动方法，分别降低了22%和45%。该理论在一系列配位数和接触刚度比范围内，对位移波动和弹性模量的预测均有实质性改进。 提出的自洽对波动理论显著提高了对二维颗粒材料弹性模量的预测精度。 在局部化算子中显式强制执行运动学一致性条件是提升预测准确性的关键。 该理论揭示了颗粒间接触的几何与力学特性（通过配位数和接触刚度比）如何控制宏观弹性行为，为多尺度本构建模提供了更可靠的微观力学基础。 将对波动方法与自洽概念相结合，提出了SC-PF理论，在保证解析性的同时显著提升了精度。 明确地将运动学一致性条件作为约束引入理论推导，修正了局部化算子。 提供了对微观位移波动与宏观弹性响应之间关联的更深入理解，超越了单纯的经验拟合。 理论目前仅适用于二维、各向同性、由圆盘颗粒组成的组构，且假设了线性弹性接触和稳态接触网络。 未考虑颗粒自身旋转、有限变形以及接触滑移或脱离等非线性行为。 将理论框架扩展到三维颗粒体系及非球形颗粒。 纳入颗粒旋转、非线性接触律（如Hertz-Mindlin）以及塑性滑移，以描述更广泛的力学行为。 探索将该微观力学框架应用于复杂加载路径下的本构模型开发。 该理论预测的是小应变下的弹性响应，不直接适用于大变形或塑性流动阶段。 理论中所需的参数（如配位数、接触分布）通常依赖于DEM模拟或实验统计，其获取方式可能影响预测的普适性。 与更复杂的数值均匀化方法相比，该解析理论基于一系列简化假设，在极端微观结构下可能存在偏差。 弹性模量 颗粒材料 自洽理论 多尺度建模 离散元法 从事颗粒物质力学、岩土工程多尺度本构建模、材料微观力学研究的科研人员。 high 该工作在经典颗粒材料微观力学理论（平均场、对波动）基础上做出了明确且显著的改进，提出了一个兼具理论严谨性和预测精度的新模型，并给出了详尽的定量验证。对于关注颗粒材料弹性预测和多尺度方法的研究者而言，这是一篇近期发表在JMPS上的重要文献。",
+    "description": "文章针对二维各向同性圆盘颗粒组，发展了一种自洽对波动理论，用于从接触尺度特性（如接触刚度、配位数）预测其宏观有效弹性模量（体积模量与剪切模量）。核心任务是构建一个满足运动学一致性条件的局部化算子，以改进现有微观力学理论的预测精度。"
+  },
+  {
+    "title": "A parametric study of slow dynamic nonlinear elasticity with comparisons to models",
+    "authors": [
+      "Richard L. Weaver",
+      "John Y. Yoritomo"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106727",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106727.html",
+    "abstract": "Several phenomenological models that aspire to quantitative description of anomalous nonlinear mesoscopic elasticity are reviewed and compared with laboratory measurements. This class of nonlinearity, best known perhaps for slow dynamics and aging, is seen widely in imperfectly consolidated granular solids but is not well understood. Typical slow dynamic tests show that a modest conditioning oscillatory \"pump\" strain depresses material stiffness, which then recovers like the logarithm of time after conditioning ceases. Several phenomenological models based on physical arguments have been proposed that predict the material stiffness response to arbitrary pump strain histories during conditioning and recovery. Approximate closed form and numerical solutions to the models are presented that predict the quantitative influence of three key pump parameters: the pump's strain amplitude, the pump's strain rate, and the pump’s duration. Laboratory measurements on Berea sandstone, concrete and a confined single aluminum bead find that slow dynamic responses are linear in pump strain and independent of pump frequency. Measurements also show that, after pump-off, stiffness recovers over times far longer than the pump duration. These observations and others are compared to model predictions. One of the considered models, based on a picture of fast brittle damage and slow healing, successfully matches all these behaviors.",
+    "keywords": [
+      "elasticity"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "Several phenomenological models that aspire to quantitative description of anomalous nonlinear mesoscopic elasticity are reviewed and compared with laboratory measurements. This class of nonlinearity, best known perhaps for slow dynamics and aging, is seen widely in imperfectly..."
+  },
+  {
+    "title": "Nonreciprocal transition waves in active lattices",
+    "authors": [
+      "Yao Zhang",
+      "Chengxuan Zhai",
+      "Zhanfeng Li",
+      "Jiahao Li",
+      "Guangjin Mou",
+      "Lizichen Chen",
+      "Yangkun Du",
+      "Michel Destrade",
+      "Changguo Wang",
+      "Yafei Wang"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106697",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106697.html",
+    "abstract": "Active systems, such as contraction of muscle fibers and action potential propagation in neural networks, exhibit efficient directional transport of information and energy. Bringing these biological principles into engineered systems can overcome the limitations of passive metamaterials in tunability after fabrication, spontaneous reset, and the realization of dynamical nonreciprocity. However, a unified and transparent analytical framework for reversible nonreciprocal wave propagation governed by coupled fast-slow dynamics remains absent. We develop a mechanical lattice composed of active bistable elements incorporating a displacement-driven slow recovery variable to emulate biologically inspired recovery processes and capture the evolution of active stiffness. Discrete and continuum models are derived to describe the lattice dynamics. Building on continuum descriptions, we employ singular perturbation and matched asymptotic expansions, complemented by machine learning, to enable analytical characterization. Then we define a metric of nonreciprocal energy transport and map the key parameters to quantify how system parameters jointly control wave speed and propagation direction. Nonlinear results reveal that forward and backward transition waves propagate at markedly different steady speeds, demonstrating pronounced nonreciprocity. The key mechanism arises from the coupling between fast excitation and slow recovery, which produces a refractory effect that resets the energy landscape and therefore breaks time reversal symmetry in a geometrically symmetric structure. During the evolution of active stiffness, an intermediate phase emerges and co-propagates with the mechanical wave and selectively suppresses returning waves under appropriate timing conditions. Consequently, reversible and tunable nonreciprocal transition waves are achieved. We obtain bidirectional wave solutions, along with analytical expressions for wave speed, width and energy flux as well as their conditions of validity. Theoretical predictions agree closely with numerical simulations and demonstrate that the nonreciprocity depends on the recovery rate in a nonlinear manner. This study provides a general theoretical framework and practical design guidelines for bioinspired intelligent metamaterials that enable reversible directional energy routing, signal isolation, and mechanical logic, and it also informs the design of field controlled phase change materials and multiphysics devices.",
+    "keywords": [
+      "lattice"
+    ],
+    "topics": [
+      "metamaterials"
+    ],
+    "ai_text": "",
+    "description": "Active systems, such as contraction of muscle fibers and action potential propagation in neural networks, exhibit efficient directional transport of information and energy. Bringing these biological principles into engineered systems can overcome the limitations of passive metam..."
+  },
+  {
+    "title": "Classification of rotational zero modes in 2D micropolar solids",
+    "authors": [
+      "Dingxin Sun",
+      "Yi Chen",
+      "Gengkai Hu"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106704",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106704.html",
+    "abstract": "Zero modes, which are deformations that cost zero energy, underlie many exotic behaviors in elastic metamaterials. While classical linear Cauchy elasticity explains many of these modes, those linked to the rotations of metamaterial inner components often lie beyond its scope. Micropolar elasticity, which incorporates translation and rotation degrees of freedom, provides a framework for capturing these rotational modes. Herein, we present the first complete symmetry-based classification of zero modes in two-dimensional micropolar solids, with an emphasis on rotation-related modes. Guided by this classification, we construct threefold rotationally symmetric micropolar metamaterials and realize typical rotational micropolar zero modes. We further show that these metamaterials exhibit wave phenomena forbidden in Cauchy continua, including the emergence of three bulk waves in the long-wavelength limit and associated triple refraction, chiral acoustic modes, as well as strong wave anisotropy. All intriguing properties are quantitatively captured by micropolar continuum descriptions, whereas the classical Cauchy continuum theory fails to predict these behaviors, even at a qualitative level. Our results establish a general framework for engineering rotation-based zero modes, opening avenues for designing metamaterials with novel wave properties.",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "Zero modes, which are deformations that cost zero energy, underlie many exotic behaviors in elastic metamaterials. While classical linear Cauchy elasticity explains many of these modes, those linked to the rotations of metamaterial inner components often lie beyond its scope. Mi..."
+  },
+  {
+    "title": "Graph-field framework for fracture mechanics of architected lattice materials",
+    "authors": [
+      "Yang Gao",
+      "Junjie Liu",
+      "Xiaoding Wei"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106729",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106729.html",
+    "abstract": "Fracture in architected lattice materials challenges classical Linear Elastic Fracture Mechanics (LEFM) due to the breakdown of scale separation and the dominance of discrete topological effects. This study establishes a rigorous Graph-Field (GF) framework that bridges discrete topology and continuum theory by mapping nodal equilibrium directly to partial differential equations via a vanishing-cell-size limit. Unlike phenomenological homogenization, the GF approach explicitly captures architecture-induced anomalous couplings and non-affine kinematics without empirical fitting. We reveal that distinct topological hierarchies (i.e., single-level versus dual-level architectures) and internal kinematic constraints fundamentally reshape near-tip kinematic fields, generating unconventional deformation patterns missed by standard orthotropic models. Furthermore, a parameter-free criterion based on maximum principal strain is shown to accurately predict kinked crack trajectories, by identifying the physical “weakest link” within the network. Finally, using Eshelby’s configurational mechanics, we derive a path-independent crack driving force. This metric reveals that standard ASTM fracture testing protocols intrinsically smooth out localized kinematics and can severely overestimate the toughness of highly constrained, dual-level lattices. Ultimately, the GF framework provides a thermodynamically consistent foundation for the experimental characterization, generative inverse design, and broad multi-scale exploration of complex structural metamaterials.",
+    "keywords": [
+      "architected",
+      "fracture",
+      "lattice",
+      "mechanics"
+    ],
+    "topics": [
+      "fracture",
+      "mechanics",
+      "metamaterials"
+    ],
+    "ai_text": "",
+    "description": "Fracture in architected lattice materials challenges classical Linear Elastic Fracture Mechanics (LEFM) due to the breakdown of scale separation and the dominance of discrete topological effects. This study establishes a rigorous Graph-Field (GF) framework that bridges discrete..."
+  },
+  {
+    "title": "Taming leaky waves in fluid-loaded thin structures via space- and time-modulated metamaterials",
+    "authors": [
+      "Emanuele Riva",
+      "Alper Erturk"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106721",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106721.html",
+    "abstract": "",
+    "keywords": [
+      "metamaterial",
+      "metamaterials"
+    ],
+    "topics": [
+      "metamaterials"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Fast dispersion analysis of layered and periodic composite beams via a traction-continuity-preserving mixed finite element formulation",
+    "authors": [
+      "Jiaqing Jiang",
+      "Zhan Shi",
+      "Weiqiu Chen",
+      "Marco Amabili"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106725",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106725.html",
+    "abstract": "",
+    "keywords": [
+      "finite element"
+    ],
+    "topics": [
+      "computational mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Discontinuous plasticity in Sn single crystals: a combined experiment and modelling study",
+    "authors": [
+      "Hai Xin",
+      "Tianhong Gu",
+      "Finn Giuliani",
+      "T. Ben Britton",
+      "Mei Zhan",
+      "Yilun Xu",
+      "Zebang Zheng"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106714",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106714.html",
+    "abstract": "",
+    "keywords": [
+      "plastic",
+      "plasticity"
+    ],
+    "topics": [
+      "plasticity"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Fabric evolution modeling for granular materials under various monotonic and cyclic stress paths accounting for nonproportionality",
+    "authors": [
+      "Rui Wang",
+      "Weibin Mo",
+      "Qi Liu",
+      "Jian-Min Zhang",
+      "Yannis F. Dafalias"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106728",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106728.html",
+    "abstract": "",
+    "keywords": [
+      "stress"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Unifying mean-field models through the method of multiscale virtual power and its dual formulation",
+    "authors": [
+      "José L.P. Vila-Chã",
+      "António M. Couto Carneiro",
+      "Bernardo P. Ferreira",
+      "F.M. Andrade Pires"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106724",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106724.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Convergence of phase-field models with emergent discontinuities to CZMs in multidimensional space: A proof via cohesive laws and sharp-crack energy limits",
+    "authors": [
+      "Ye Feng",
+      "Jie Li"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106705",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106705.html",
+    "abstract": "",
+    "keywords": [
+      "crack",
+      "phase-field"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Predicting slip transmission in polycrystalline Ni",
+    "authors": [
+      "Rembert D. White",
+      "Yang Su",
+      "Josh Kacher",
+      "Irene J. Beyerlein"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106726",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106726.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Polydisperse polymer networks with irregular topologies: Mechanics of cross-link distributions",
+    "authors": [
+      "Jason Mulderrig",
+      "Michael Buche",
+      "Matthew Grasinger"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106706",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106706.html",
+    "abstract": "",
+    "keywords": [
+      "mechanics"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A constitutive framework for distortional-mode-dependent failure in soft materials: Tension–compression asymmetry and beyond",
+    "authors": [
+      "Yogesh C. Chandrashekar",
+      "Kshitiz Upadhyay"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106700",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106700.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Temperature and strain-rate dependence of plasticity in a TiZrHf refractory multi-principal element alloy: Microscopic mechanism and constitutive modeling",
+    "authors": [
+      "Xiaying Ma",
+      "Kerong Ren",
+      "Peiyuan Ma",
+      "Houcheng Xu",
+      "Zhijun Zheng",
+      "Zhibin Li",
+      "Shun Li",
+      "Hang Wang",
+      "Zihan Zhang",
+      "Rong Chen"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106722",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106722.html",
+    "abstract": "",
+    "keywords": [
+      "plastic",
+      "plasticity",
+      "strain"
+    ],
+    "topics": [
+      "mechanics",
+      "plasticity"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Cohesive fracture in dual complementary space: The variational Bulk-Crack Decomposition (BCD) theory",
+    "authors": [
+      "Jian-Ying Wu",
+      "Qing Xia",
+      "Yuheng Zhuang",
+      "Yuli Huang"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106736",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106736.html",
+    "abstract": "",
+    "keywords": [
+      "crack",
+      "fracture"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A micro-macroscopic constitutive model for spatial confinement hydrogels incorporating directional chain slippage and crosslinking distance evolution",
+    "authors": [
+      "Yunqiang Hu",
+      "Zhaoguo Gao",
+      "Fei Jia",
+      "Yanju Liu",
+      "Jinsong Leng"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106701",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106701.html",
+    "abstract": "",
+    "keywords": [
+      "gel",
+      "hydrogel"
+    ],
+    "topics": [
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "DFENN: A penalty-free variational framework coupling finite elements and neural networks via interface condensation",
+    "authors": [
+      "Chang Wu",
+      "Chang Liu",
+      "Yilin Guo",
+      "Xu Guo"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106703",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106703.html",
+    "abstract": "",
+    "keywords": [
+      "finite element"
+    ],
+    "topics": [
+      "computational mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Bulk and surface control of micro-displacements",
+    "authors": [
+      "G. Zurlo",
+      "L. Truskinovsky"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106737",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106737.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Numerical analysis of Kinetic Monte Carlo algorithms for Shear Transformation Zone plasticity",
+    "authors": [
+      "Vasudevan Kamasamudram",
+      "Nicolas Moës",
+      "Thomas Pardoen"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106730",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106730.html",
+    "abstract": "",
+    "keywords": [
+      "numerical",
+      "plastic",
+      "plasticity"
+    ],
+    "topics": [
+      "computational mechanics",
+      "plasticity"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Modelling growth of soft solid as optimal control of nonlocal material manifolds",
+    "authors": [
+      "Ruoyu Huang"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106699",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106699.html",
+    "abstract": "",
+    "keywords": [
+      "soft solid"
+    ],
+    "topics": [
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A predictive stochastic continuum framework for concrete subjected to high-velocity impact loading",
+    "authors": [
+      "Sohanjit Ghosh",
+      "Michael A. Homel",
+      "Zhifei Deng",
+      "Ryan C. Hurley"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106716",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106716.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Roles of lattice distortion and chemical short-range order in dislocation drag and strain-rate sensitivity over wide strain rates",
+    "authors": [
+      "Guanyu Huang",
+      "Xiaoqing Zhang",
+      "Xuetao Zou",
+      "Kai Wang",
+      "Zhuocheng Xie",
+      "Wu-Rong Jian",
+      "Shuang Qin",
+      "Xiaohu Yao"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106723",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106723.html",
+    "abstract": "",
+    "keywords": [
+      "dislocation",
+      "lattice",
+      "strain"
+    ],
+    "topics": [
+      "dislocations",
+      "mechanics",
+      "metamaterials"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "The Mullins effect, mechanical preconditioning, and predictive power",
+    "authors": [
+      "Maximilian P. Wollner",
+      "Gerhard A. Holzapfel"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106698",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106698.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "On asymptotic-stress-amplitude-driven phase field modeling of crack growth in a hyperelastic continuum",
+    "authors": [
+      "Xuan Hu",
+      "Shaofan Li"
+    ],
+    "date": "2026-09-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106695",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-09/10-1016-j-jmps-2026-106695.html",
+    "abstract": "",
+    "keywords": [
+      "crack",
+      "phase field",
+      "stress"
+    ],
+    "topics": [
+      "fracture",
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "High strain rate behavior of liquid crystal elastomers",
+    "authors": [
+      "Adeline Wihardja",
+      "Juan Carlos Nieto-Fuentes",
+      "Daniel Rittel",
+      "Kaushik Bhattacharya"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106501",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106501.html",
+    "abstract": "",
+    "keywords": [
+      "elastomer",
+      "strain"
+    ],
+    "topics": [
+      "mechanics",
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Editorial Board",
+    "authors": [],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/s0022-5096(26)00037-2",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-s0022-5096-26-00037-2.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Homogenization framework for rigid and non-rigid foldable origami metamaterials",
+    "authors": [
+      "Xuwen Li",
+      "Amin Jamalimehr",
+      "Mathias Legrand",
+      "Damiano Pasini"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106519",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106519.html",
+    "abstract": "",
+    "keywords": [
+      "homogenization",
+      "metamaterial",
+      "metamaterials"
+    ],
+    "topics": [
+      "homogenization",
+      "metamaterials"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Electro-mechanical wrinkling of soft dielectric films bonded to hyperelastic substrates",
+    "authors": [
+      "Bin Wu",
+      "Linghao Kong",
+      "Weiqiu Chen",
+      "Davide Riccobelli",
+      "Michel Destrade"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106490",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2025-106490.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Shear banding in high-entropy alloy",
+    "authors": [
+      "De-Ru Wang",
+      "Tong Li",
+      "Ming-Yao Su",
+      "Yan Chen",
+      "Hai-Ying Wang",
+      "Lan-Hong Dai"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106517",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106517.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A stationary phase-based theory of diffraction: Modeling three-dimensional elastic wave diffraction from defect edges with arbitrary shapes",
+    "authors": [
+      "Zhengyu Wei",
+      "Fan Shi"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106498",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2025-106498.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Elastodynamics of two-dimensional odd mechanical media: Theory, homogenization and wave characterization",
+    "authors": [
+      "Wen Cheng",
+      "Honghua Qian",
+      "Shaoyun Wang",
+      "Fan Yang",
+      "Quan Wang",
+      "Rui Zhu",
+      "Gengkai Hu",
+      "Guoliang Huang"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106502",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106502.html",
+    "abstract": "",
+    "keywords": [
+      "homogenization"
+    ],
+    "topics": [
+      "homogenization"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Modeling axisymmetric contact problems within strain gradient elasticity",
+    "authors": [
+      "Lucca Schek",
+      "Aleksandr Morozov",
+      "Sergei Khakalo",
+      "Wolfgang H. Müller"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106513",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106513.html",
+    "abstract": "",
+    "keywords": [
+      "elasticity",
+      "strain"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Experimentally reconstructing the interplay of slip and microstructure in polycrystalline shape-memory alloys",
+    "authors": [
+      "Andrew Christison",
+      "Harshad M. Paranjape",
+      "Samantha Daly"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106518",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106518.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Nonadditive quantum friction at water-carbon interfaces on substrates",
+    "authors": [
+      "Zonghuiyi Jiang",
+      "Zhuhua Zhang",
+      "Zepu Kou",
+      "Yuquan Zhou",
+      "Fangyuan Chen",
+      "Jun Yin",
+      "Wanlin Guo",
+      "Xiaofei Liu"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106522",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106522.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Capturing the fractocohesive length scale in elastomers through a statistical mechanics-based gradient enhanced damage model",
+    "authors": [
+      "S. Mohammad Mousavi",
+      "Jason Mulderrig",
+      "Brandon Talamini",
+      "Nikolaos Bouklas"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106504",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106504.html",
+    "abstract": "",
+    "keywords": [
+      "damage",
+      "elastomer",
+      "mechanics"
+    ],
+    "topics": [
+      "fracture",
+      "mechanics",
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "The effect of fiber plasticity on domain formation in soft biological composites—Part I: A bifurcation analysis",
+    "authors": [
+      "Michalis Agoras",
+      "Fernanda F. Fontenele",
+      "Nikolaos Bouklas"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106482",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2025-106482.html",
+    "abstract": "",
+    "keywords": [
+      "plastic",
+      "plasticity"
+    ],
+    "topics": [
+      "plasticity"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Inference of phase field fracture models",
+    "authors": [
+      "Elizabeth Livingston",
+      "Siddhartha Srivastava",
+      "Jamie Holber",
+      "Hashem M. Mourad",
+      "Krishna Garikipati"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106495",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2025-106495.html",
+    "abstract": "",
+    "keywords": [
+      "fracture",
+      "phase field"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A micro-informed thermodynamically consistent plasticity model for clays accounting for double porosity and fabric",
+    "authors": [
+      "Angelo Amorosi",
+      "Yang Yu",
+      "Zhongxuan Yang",
+      "Fabio Rollo"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106503",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106503.html",
+    "abstract": "",
+    "keywords": [
+      "plastic",
+      "plasticity"
+    ],
+    "topics": [
+      "plasticity"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Mechanics of sequential damage in twisted fiber bundles across scales",
+    "authors": [
+      "Siqi Yan",
+      "Xizhe Zhang",
+      "Zhaoxin Zhang",
+      "Zheng Jia",
+      "Shuze Zhu"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2026.106516",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2026-106516.html",
+    "abstract": "",
+    "keywords": [
+      "damage",
+      "mechanics"
+    ],
+    "topics": [
+      "fracture",
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "In search of constitutive conditions in isotropic hyperelasticity: polyconvexity versus true-stress-true-strain monotonicity",
+    "authors": [
+      "Maximilian P. Wollner",
+      "Gerhard A. Holzapfel",
+      "Patrizio Neff"
+    ],
+    "date": "2026-03-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106465",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-03/10-1016-j-jmps-2025-106465.html",
+    "abstract": "",
+    "keywords": [
+      "elasticity",
+      "strain",
+      "stress"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A probabilistic buckling model for hemispherical shells with non-interacting localized defects",
+    "authors": [
+      "Zheren Baizhikova",
+      "Uba K. Ubamanyu",
+      "Fani Derveni",
+      "Roberto Ballarini",
+      "Pedro M. Reis",
+      "Jia-Liang Le"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106468",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106468.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "The broad wrinkling landscape of hyperelastic parallelogram-shaped membranes: From wrinkle migration to restabilization and their subsequent reappearance elsewhere",
+    "authors": [
+      "Mohammad Hosein Nejabatmeimandi",
+      "Francesco Dal Corso"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106461",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106461.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Editorial Board",
+    "authors": [],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/s0022-5096(26)00008-6",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-s0022-5096-26-00008-6.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Coupled thermo-chemo-mechanical modeling of reactive solids: Applications to thermochemical energy storage materials",
+    "authors": [
+      "Srivatsa Bhat Kaudur",
+      "Claudio V. Di Leo"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106448",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106448.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Osmotic control of the spacing of parallel shear cracks in shale growing subcritically in geologic past",
+    "authors": [
+      "Yang Zhao",
+      "Anh T. Nguyen",
+      "Hoang T. Nguyen",
+      "Zdeněk P. Bažant"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106428",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106428.html",
+    "abstract": "",
+    "keywords": [
+      "crack"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A machine learning bridged concurrent multi-scale computational framework for microstructure related macro-cracking",
+    "authors": [
+      "Ronghai Wu",
+      "Yufan Zhang",
+      "Jinze Pei",
+      "Zanpeng Shangguan",
+      "Yuxin Zhang",
+      "Lei Zeng",
+      "Zichao Peng",
+      "Heng Li"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106469",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106469.html",
+    "abstract": "",
+    "keywords": [
+      "computational",
+      "crack"
+    ],
+    "topics": [
+      "computational mechanics",
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Atomistically informed partial dislocation dynamics of multi-principal element alloys",
+    "authors": [
+      "Xin Liu",
+      "Hyunsoo Lee",
+      "Yang Li",
+      "Liam Myhill",
+      "David Rodney",
+      "Pierre-Antoine Geslin",
+      "Nikhil Chandra Admal",
+      "Giacomo Po",
+      "Enrique Martinez",
+      "Yinan Cui"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106478",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106478.html",
+    "abstract": "",
+    "keywords": [
+      "dislocation"
+    ],
+    "topics": [
+      "dislocations"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Do discrete fine-scale mechanical models with rotational degrees of freedom homogenize into a Cosserat or a Cauchy continuum?",
+    "authors": [
+      "Jan Eliáš",
+      "Gianluca Cusatis"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106422",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106422.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Interfacial evolution explains the complex swelling-shrinkage responses of porous materials from vacuum-dry to full liquid saturation",
+    "authors": [
+      "Mohammadali Behboodi",
+      "Yida Zhang"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106425",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106425.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Continuum theory for the mechanics of curved epithelial shells by coarse-graining an ensemble of active gel cellular surfaces",
+    "authors": [
+      "Pradeep K. Bal",
+      "Adam Ouzeri",
+      "Marino Arroyo"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106477",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106477.html",
+    "abstract": "",
+    "keywords": [
+      "gel",
+      "mechanics"
+    ],
+    "topics": [
+      "mechanics",
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A viscoelastic micro-stretch theory for monodomain nematic liquid crystal elastomers",
+    "authors": [
+      "Yuefeng Jiang",
+      "Zengting Xu",
+      "Rui Xiao",
+      "Sanjay Govindjee",
+      "Thao D. Nguyen"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106412",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106412.html",
+    "abstract": "",
+    "keywords": [
+      "elastomer"
+    ],
+    "topics": [
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Indentation-based anisotropic material parameter identifiability: Validation on a synthetic soft tissue phantom",
+    "authors": [
+      "Amit Ashkenazi",
+      "Adi Shultz",
+      "Lee Jordan",
+      "Dana Solav"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106417",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106417.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "TPMS sheet structures with orthorhombic symmetry: Anisotropic elasticity and energy absorption",
+    "authors": [
+      "Stephen Daynes"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106489",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106489.html",
+    "abstract": "",
+    "keywords": [
+      "elasticity"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Wrinkling mechanics of immersed magneto-active hydrogels",
+    "authors": [
+      "Guozhan Xia",
+      "Renwei Mao",
+      "Weiqiu Chen",
+      "Yipin Su"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106430",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106430.html",
+    "abstract": "",
+    "keywords": [
+      "gel",
+      "hydrogel",
+      "mechanics"
+    ],
+    "topics": [
+      "mechanics",
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Orthogonality-based energy split for anisotropic compressive-shear brittle fracture: A hybrid phase-field model",
+    "authors": [
+      "Hui Li",
+      "Shanyong Wang"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106431",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106431.html",
+    "abstract": "",
+    "keywords": [
+      "fracture",
+      "phase-field"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A unified variational damage model and an efficient length scale insensitive phase-field model",
+    "authors": [
+      "Ya Duan",
+      "Huilong Ren",
+      "Yehui Bie",
+      "Xiaoying Zhuang",
+      "Timon Rabczuk"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106494",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106494.html",
+    "abstract": "",
+    "keywords": [
+      "damage",
+      "phase-field"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Fracture analysis of nonlocally homogenised solids via stochastic gradient estimates embedded in physics-informed neural networks",
+    "authors": [
+      "Rohit Sinha",
+      "Kolati Heman Sudeep",
+      "Arjun Kaithavalappil",
+      "Saikat Sarkar"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106458",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106458.html",
+    "abstract": "",
+    "keywords": [
+      "fracture"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Phase-field cohesive fracture models with strong displacement discontinuities",
+    "authors": [
+      "Ye Feng",
+      "Lu Hai"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106479",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106479.html",
+    "abstract": "",
+    "keywords": [
+      "fracture",
+      "phase-field"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Hydrogen embrittlement: Modelling material degradation and computational issues",
+    "authors": [
+      "S. Xenos",
+      "I. Papadioti",
+      "E. Kamoutsi",
+      "G.N. Haidemenopoulos",
+      "P. Sofronis",
+      "N. Aravas"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106486",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106486.html",
+    "abstract": "",
+    "keywords": [
+      "computational"
+    ],
+    "topics": [
+      "computational mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Using a negative exponent to prevent unphysical instability in fiber-reinforced hyperelastic materials",
+    "authors": [
+      "Hio Konishi",
+      "Seishiro Matsubara",
+      "So Nagashima",
+      "Dai Okumura"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106480",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106480.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Stochastic data-driven inference of mesoscale lattice discrete particle model parameters via multiscale observations",
+    "authors": [
+      "Baixi Chen",
+      "Alessandro Fascetti"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106481",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106481.html",
+    "abstract": "",
+    "keywords": [
+      "lattice"
+    ],
+    "topics": [
+      "metamaterials"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A thermodynamically consistent multiscale thermo-mechanical-temporal damage model for quasi-brittle geomaterials",
+    "authors": [
+      "Zhaomin Lv",
+      "Yuanming Lai",
+      "Jianying Wu",
+      "Lunyang Zhao"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106483",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106483.html",
+    "abstract": "",
+    "keywords": [
+      "damage"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Material Fingerprinting for rapid discovery of hyperelastic models: First experimental validation",
+    "authors": [
+      "Denisa Martonová",
+      "Ellen Kuhl",
+      "Moritz Flaschel"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106463",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106463.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Micromechanical insights into the uniaxial stress-strain behaviour of glassy amorphous polymers through molecular dynamics simulations",
+    "authors": [
+      "Pramod Kumar Patel",
+      "Sumit Basu"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106496",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106496.html",
+    "abstract": "",
+    "keywords": [
+      "simulation",
+      "strain",
+      "stress"
+    ],
+    "topics": [
+      "computational mechanics",
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Exploring the inverse poroelastic behavior of hydrogels: the roles of finite extensibility of polymer chains and unfolding of polymer domains",
+    "authors": [
+      "Qifang Zhang",
+      "Junjie Liu",
+      "Jinglei Yang",
+      "Shaoxing Qu",
+      "Guozheng Kang"
+    ],
+    "date": "2026-02-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106464",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2026-02/10-1016-j-jmps-2025-106464.html",
+    "abstract": "",
+    "keywords": [
+      "gel",
+      "hydrogel"
+    ],
+    "topics": [
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Modeling coupled electro-chemo-mechanical phenomena within all-solid-state battery composite cathodes",
+    "authors": [
+      "Kasra Taghikhani",
+      "William Huber",
+      "Peter J. Weddle",
+      "Mohsen Asle Zaeem",
+      "J.R. Berger",
+      "Robert J. Kee"
+    ],
+    "date": "2025-05-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106060",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-05/10-1016-j-jmps-2025-106060.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Torsion-mediated instabilities in confined elastic layers",
+    "authors": [
+      "Tara K. Venkatadri",
+      "Chuwei Ye",
+      "Tal Cohen",
+      "Shaoting Lin"
+    ],
+    "date": "2025-05-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106064",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-05/10-1016-j-jmps-2025-106064.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Phase-augmented digital image correlation for high-accuracy deformation measurement: Theory, validation, and application to constitutive law learning",
+    "authors": [
+      "Rahul Danda",
+      "Xinxin Wu",
+      "Sheng Mao",
+      "Yin Zhang",
+      "Ting Zhu",
+      "Shuman Xia"
+    ],
+    "date": "2025-05-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106051",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-05/10-1016-j-jmps-2025-106051.html",
+    "abstract": "",
+    "keywords": [
+      "deformation"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Inflation of a polydomain nematic elastomeric membrane",
+    "authors": [
+      "Lingrui Zhu",
+      "Mengqi He",
+      "Baihong Chen",
+      "Jin Qian",
+      "Rui Xiao"
+    ],
+    "date": "2025-05-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106075",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-05/10-1016-j-jmps-2025-106075.html",
+    "abstract": "",
+    "keywords": [
+      "elastomer"
+    ],
+    "topics": [
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Editorial Board",
+    "authors": [],
+    "date": "2025-05-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/s0022-5096(25)00070-5",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-05/10-1016-s0022-5096-25-00070-5.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Analysis of axisymmetric necking of a circular dielectric membrane based on a one-dimensional model",
+    "authors": [
+      "Xiang Yu",
+      "Yibin Fu"
+    ],
+    "date": "2025-05-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106071",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-05/10-1016-j-jmps-2025-106071.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Unusual stretching–twisting of liquid crystal elastomer bilayers",
+    "authors": [
+      "Zhijun Dai",
+      "Ya Wen",
+      "Zhiang Chen",
+      "Yijian Chen",
+      "Yifan Yang",
+      "Mengdi Gao",
+      "Yuzhen Chen",
+      "Fan Xu"
+    ],
+    "date": "2025-05-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106066",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-05/10-1016-j-jmps-2025-106066.html",
+    "abstract": "",
+    "keywords": [
+      "elastomer"
+    ],
+    "topics": [
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Editorial Board",
+    "authors": [],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/s0022-5096(25)00059-6",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-s0022-5096-25-00059-6.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Magnetothermal dehydration induced deformation of hydrogel structures: Modelling and experiment",
+    "authors": [
+      "Jingda Tang",
+      "Huangsan Wei",
+      "Wenjie Zhang",
+      "Jiayi Lin",
+      "Chao Yuan",
+      "Tiejun Wang"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106061",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106061.html",
+    "abstract": "",
+    "keywords": [
+      "deformation",
+      "gel",
+      "hydrogel"
+    ],
+    "topics": [
+      "mechanics",
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Electromechanical buckling of periodic patterns on stiff film bonded to a compliant substrate – Analytical and numerical postbuckling analyses",
+    "authors": [
+      "Samy Abu-Salih"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106062",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106062.html",
+    "abstract": "",
+    "keywords": [
+      "numerical"
+    ],
+    "topics": [
+      "computational mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A unified anisotropic phase field model for progressive failure of fiber-reinforced composite materials",
+    "authors": [
+      "Yuanfeng Yu",
+      "Chi Hou",
+      "Meiying Zhao"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106063",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106063.html",
+    "abstract": "",
+    "keywords": [
+      "phase field"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Grid hollow octet truss lattices that are stable at low relative density",
+    "authors": [
+      "Peijie Zhang",
+      "Xueyan Chen",
+      "Penghui Yu",
+      "Kun Zhao",
+      "Haoxiang Ma",
+      "Shiqiu Liu",
+      "Huifeng Tan",
+      "Vincent Laude",
+      "Muamer Kadic"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106068",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106068.html",
+    "abstract": "",
+    "keywords": [
+      "lattice"
+    ],
+    "topics": [
+      "metamaterials"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Mechanics of liquid crystal inclusions in soft matrices",
+    "authors": [
+      "Yifei Bai",
+      "Laurence Brassart"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106070",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106070.html",
+    "abstract": "",
+    "keywords": [
+      "mechanics"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Synergistic toughening mechanisms of macro- and micro-structures in nacre: Effects of T-stresses",
+    "authors": [
+      "Yi Yan",
+      "Xi-Qiao Feng"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106067",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106067.html",
+    "abstract": "",
+    "keywords": [
+      "stress"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A unified morphomechanics theory framework for both Euclidean and non-Euclidean curved crease origami",
+    "authors": [
+      "Yinzheng Yu",
+      "Ruoman Zhu",
+      "Kai Wei",
+      "Xujing Yang"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106046",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106046.html",
+    "abstract": "",
+    "keywords": [
+      "mechanics"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Parthenocissus tricuspidata tendril: A mechanically robust structural design with multiple functions",
+    "authors": [
+      "Jin-Hui Zhou",
+      "Lin Zhang",
+      "Sen-Zhen Zhan",
+      "Qiao Zhang",
+      "Yuxin Sun",
+      "Xi-Qiao Feng",
+      "Zi-Long Zhao"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106065",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106065.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A theory of fatigue fracture in viscoelastic solids",
+    "authors": [
+      "Guillaume Lostec",
+      "Julien Caillard",
+      "Davide Colombo",
+      "Rong Long"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106047",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106047.html",
+    "abstract": "",
+    "keywords": [
+      "fracture"
+    ],
+    "topics": [
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A dynamic homogenization method for elastic wave band gap and initial-boundary value problem analysis of piezoelectric composites with elastic and viscoelastic periodic layers",
+    "authors": [
+      "Mengyuan Gao",
+      "Zhelong He",
+      "Jie Liu",
+      "Chaofeng Lü",
+      "Guannan Wang"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106048",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106048.html",
+    "abstract": "",
+    "keywords": [
+      "homogenization"
+    ],
+    "topics": [
+      "homogenization"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Approximating arbitrary traction–separation-laws by means of phase-field theory — Mathematical foundation and numerical implementation",
+    "authors": [
+      "H. Lammen",
+      "S. Conti",
+      "J. Mosler"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106038",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106038.html",
+    "abstract": "",
+    "keywords": [
+      "numerical",
+      "phase-field"
+    ],
+    "topics": [
+      "computational mechanics",
+      "fracture"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "t-PiNet: A thermodynamics-informed hierarchical learning for discovering constitutive relations of geomaterials",
+    "authors": [
+      "Pin Zhang",
+      "Konstantinos Karapiperis",
+      "Oliver Weeger"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106049",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106049.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A discrete–continuous model of coupled plasticity and fracture",
+    "authors": [
+      "Zhangtao Li",
+      "Zhuo Zhuang",
+      "Zhijie Li",
+      "Tao Wang",
+      "Zhanli Liu",
+      "Yinan Cui"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106044",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106044.html",
+    "abstract": "",
+    "keywords": [
+      "fracture",
+      "plastic",
+      "plasticity"
+    ],
+    "topics": [
+      "fracture",
+      "plasticity"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Indentation on a constrained electroactive gel",
+    "authors": [
+      "Guozhan Xia"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106045",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106045.html",
+    "abstract": "",
+    "keywords": [
+      "gel",
+      "strain"
+    ],
+    "topics": [
+      "mechanics",
+      "soft matter"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "The deformation mode transition of indented elastic thin shell induced by localized curvature imperfection",
+    "authors": [
+      "Chongxi Jiao",
+      "Xinming Qiu"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106039",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106039.html",
+    "abstract": "",
+    "keywords": [
+      "deformation"
+    ],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "A chemo-thermo-mechanically coupled theory of photo-reacting polymers: Application to modeling photo-degradation with irradiation-driven heat transfer",
+    "authors": [
+      "Keven Alkhoury",
+      "Shawn A. Chester"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2025.106050",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2025-106050.html",
+    "abstract": "",
+    "keywords": [],
+    "topics": [
+      "mechanics"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  },
+  {
+    "title": "Phase field fracture in elastoplastic solids: a stress-state, strain-rate, and orientation dependent model in explicit dynamics and its applications to additively manufactured metals",
+    "authors": [
+      "Cunyi Li",
+      "Jian Liu",
+      "Le Dong",
+      "Chi Wu",
+      "Grant Steven",
+      "Qing Li",
+      "Jianguang Fang"
+    ],
+    "date": "2025-04-01",
+    "journal": "Journal of the Mechanics and Physics of Solids",
+    "doi": "10.1016/j.jmps.2024.105978",
+    "url": "/papers/journal-of-the-mechanics-and-physics-of-solids/2025-04/10-1016-j-jmps-2024-105978.html",
+    "abstract": "",
+    "keywords": [
+      "fracture",
+      "phase field",
+      "plastic",
+      "strain",
+      "stress"
+    ],
+    "topics": [
+      "fracture",
+      "mechanics",
+      "plasticity"
+    ],
+    "ai_text": "",
+    "description": "暂无摘要或 AI 分析。"
+  }
+]

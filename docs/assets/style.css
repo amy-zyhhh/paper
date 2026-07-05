@@ -79,6 +79,25 @@ h2 {
   border-top: 1px solid var(--line);
 }
 
+.paper-summary {
+  margin: 1.25rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.paper-summary h2 {
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .meta {
   margin: 0.2rem 0;
   color: var(--muted);
@@ -105,6 +124,34 @@ h2 {
 .ai-notes ul {
   margin: 0.25rem 0 0.75rem 1.2rem;
   padding: 0;
+}
+
+.search-panel {
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.search-input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+
+.search-modes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.85rem;
+}
+
+.search-modes label {
+  color: var(--muted);
 }
 
 @media (max-width: 640px) {

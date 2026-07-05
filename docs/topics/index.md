@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Topics
+title: "主题分类"
 ---
 
 
-# Topics
+# 主题分类
 
-- [computational mechanics]({{ '/topics/computational-mechanics.html' | relative_url }})
-- [dislocations]({{ '/topics/dislocations.html' | relative_url }})
-- [fracture]({{ '/topics/fracture.html' | relative_url }})
-- [homogenization]({{ '/topics/homogenization.html' | relative_url }})
-- [mechanics]({{ '/topics/mechanics.html' | relative_url }})
-- [metamaterials]({{ '/topics/metamaterials.html' | relative_url }})
-- [plasticity]({{ '/topics/plasticity.html' | relative_url }})
-- [soft matter]({{ '/topics/soft-matter.html' | relative_url }})
+- [computational mechanics (8)]({{ '/topics/computational-mechanics.html' | relative_url }})
+- [dislocations (2)]({{ '/topics/dislocations.html' | relative_url }})
+- [fracture (19)]({{ '/topics/fracture.html' | relative_url }})
+- [homogenization (3)]({{ '/topics/homogenization.html' | relative_url }})
+- [mechanics (55)]({{ '/topics/mechanics.html' | relative_url }})
+- [metamaterials (7)]({{ '/topics/metamaterials.html' | relative_url }})
+- [plasticity (7)]({{ '/topics/plasticity.html' | relative_url }})
+- [soft matter (12)]({{ '/topics/soft-matter.html' | relative_url }})
