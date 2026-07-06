@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "搜索"
+permalink: /search/
 ---
-
 
 # 搜索
 

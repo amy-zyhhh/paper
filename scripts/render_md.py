@@ -386,7 +386,12 @@ def render_search_index(papers: list[dict[str, Any]], analyses: dict[str, dict[s
 
 def render_search_page() -> None:
     content = [
-        front_matter(ZH_SEARCH),
+        "---",
+        "layout: default",
+        f"title: {json.dumps(ZH_SEARCH, ensure_ascii=False)}",
+        "permalink: /search/",
+        "---",
+        "",
         f"# {ZH_SEARCH}",
         "",
         '<div class="search-panel">',
