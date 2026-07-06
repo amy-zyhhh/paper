@@ -187,22 +187,27 @@ def load_existing() -> list[dict[str, Any]]:
         return json.load(file)
 
 
-def merge_papers(existing: list[dict[str, Any]], fetched: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
+def merge_papers(
+    existing: list[dict[str, Any]],
+    fetched: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], int, int]:
     by_doi = {
         clean_text(paper.get("doi", "")).lower(): paper
         for paper in existing
         if clean_text(paper.get("doi", ""))
     }
     added = 0
+    existing_count = 0
     for paper in fetched:
         doi = paper["doi"]
         if doi in by_doi:
+            existing_count += 1
             by_doi[doi].update({key: value for key, value in paper.items() if value})
         else:
             by_doi[doi] = paper
             added += 1
     merged = sorted(by_doi.values(), key=lambda paper: paper.get("date", ""), reverse=True)
-    return merged, added
+    return merged, added, existing_count
 
 
 def save_papers(papers: list[dict[str, Any]]) -> None:
@@ -226,16 +231,18 @@ def main() -> int:
         for item in items
         if (paper := normalize_item(item, args.journal, args.issn))
     ]
-    merged, added = merge_papers(load_existing(), fetched)
+    merged, added, existing_count = merge_papers(load_existing(), fetched)
 
-    print(f"Fetched {len(fetched)} records for {args.journal or args.issn}.")
-    print(f"Added {added} new records; total records would be {len(merged)}.")
+    print(f"[FETCH] Crossref returned {len(fetched)} records for {args.journal or args.issn}.")
+    print(f"[ADD] {added} new DOI records.")
+    print(f"[SKIP/UPDATE] {existing_count} DOI records already existed and were merged/updated.")
+    print(f"[TOTAL] data/papers.json would contain {len(merged)} records.")
     if fetched:
-        print(f"Newest fetched paper: {fetched[0]['date']} - {fetched[0]['title']}")
+        print(f"[LATEST] {fetched[0]['date']} - {fetched[0]['title']}")
 
     if not args.dry_run:
         save_papers(merged)
-        print(f"Updated {DATA_FILE}")
+        print(f"[WRITE] Updated {DATA_FILE}")
 
     time.sleep(1)
     return 0

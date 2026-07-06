@@ -193,6 +193,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--offset", type=int, default=0, help="Start at this paper index.")
     parser.add_argument("--doi", action="append", default=[], help="Analyze this DOI only.")
     parser.add_argument(
+        "--journal",
+        default="",
+        help="Only analyze papers whose journal name matches this value.",
+    )
+    parser.add_argument(
         "--model",
         default=os.environ.get("OPENAI_MODEL", "DeepSeek-V3.2-Thinking"),
         help="OpenAI-compatible model name. Defaults to OPENAI_MODEL or DeepSeek-V3.2-Thinking.",
@@ -330,11 +335,52 @@ def request_openai(prompt: str, model: str, api_key: str, base_url: str) -> dict
     return json.loads(text)
 
 
-def selected_papers(papers: list[dict[str, Any]], args: argparse.Namespace) -> list[dict[str, Any]]:
+def journal_matches(paper: dict[str, Any], journal: str) -> bool:
+    if not journal:
+        return True
+    names = [
+        str(paper.get("journal", "")),
+        str(paper.get("container_title", "")),
+    ]
+    return any(journal.lower() in name.lower() for name in names)
+
+
+def selected_papers(
+    papers: list[dict[str, Any]],
+    args: argparse.Namespace,
+    analyzed_dois: set[str],
+) -> tuple[list[dict[str, Any]], dict[str, int]]:
     if args.doi:
         wanted = {doi.lower() for doi in args.doi}
-        return [paper for paper in papers if str(paper.get("doi", "")).lower() in wanted]
-    return papers[args.offset : args.offset + args.limit]
+        candidates = [paper for paper in papers if str(paper.get("doi", "")).lower() in wanted]
+    else:
+        candidates = papers[args.offset :]
+
+    selected = []
+    stats = {
+        "candidates": 0,
+        "skipped_missing_doi": 0,
+        "skipped_journal": 0,
+        "skipped_analyzed": 0,
+        "selected": 0,
+    }
+    for paper in candidates:
+        stats["candidates"] += 1
+        doi = str(paper.get("doi", "")).lower()
+        if not doi:
+            stats["skipped_missing_doi"] += 1
+            continue
+        if not journal_matches(paper, args.journal):
+            stats["skipped_journal"] += 1
+            continue
+        if doi in analyzed_dois and not args.overwrite:
+            stats["skipped_analyzed"] += 1
+            continue
+        selected.append(paper)
+        stats["selected"] += 1
+        if not args.doi and len(selected) >= args.limit:
+            break
+    return selected, stats
 
 
 def main() -> int:
@@ -347,18 +393,24 @@ def main() -> int:
     analyses = load_json_array(ANALYSES_FILE)
     by_doi = {str(item.get("doi", "")).lower(): item for item in analyses}
 
-    targets = selected_papers(papers, args)
+    targets, stats = selected_papers(papers, args, set(by_doi.keys()))
+    print(
+        "[AI QUEUE]"
+        f" candidates={stats['candidates']},"
+        f" selected={stats['selected']},"
+        f" skipped_analyzed={stats['skipped_analyzed']},"
+        f" skipped_journal={stats['skipped_journal']},"
+        f" skipped_missing_doi={stats['skipped_missing_doi']}"
+    )
     completed = 0
+    if not targets:
+        print("[SKIP] No papers selected for AI analysis. Existing analyses were skipped.")
     for index, paper in enumerate(targets, start=1):
         doi = str(paper.get("doi", "")).lower()
         if not doi:
             continue
-        if doi in by_doi and not args.overwrite:
-            print(f"[{index}/{len(targets)}] {doi} already analyzed; skipping.")
-            continue
-
         prompt = make_prompt(paper, args.max_chars)
-        print(f"[{index}/{len(targets)}] analyzing {doi} ({len(prompt)} prompt chars)")
+        print(f"[AI {index}/{len(targets)}] START {doi} ({len(prompt)} prompt chars)")
         if args.dry_run:
             print(prompt[:1200])
             print("...")
@@ -384,12 +436,16 @@ def main() -> int:
         }
         by_doi[doi] = record
         completed += 1
+        print(f"[AI {index}/{len(targets)}] OK {doi}")
+        save_json(ANALYSES_FILE, sorted(by_doi.values(), key=lambda item: item.get("date", ""), reverse=True))
+        print(f"[WRITE] Saved progress: {len(by_doi)} analyses to {ANALYSES_FILE}")
         time.sleep(0.5)
 
-    if not args.dry_run:
-        save_json(ANALYSES_FILE, sorted(by_doi.values(), key=lambda item: item.get("date", ""), reverse=True))
-        print(f"Saved {len(by_doi)} analyses to {ANALYSES_FILE}")
-    print(f"New analyses: {completed}")
+    if args.dry_run:
+        print("[DRY-RUN] No analyses were written.")
+    else:
+        print(f"[WRITE] Final analysis count: {len(by_doi)} records in {ANALYSES_FILE}")
+    print(f"[AI SUMMARY] new={completed}, selected={len(targets)}, skipped_analyzed={stats['skipped_analyzed']}")
     return 0
 
 

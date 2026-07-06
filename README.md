@@ -187,6 +187,25 @@ python scripts\enrich_elsevier.py --doi "10.1016/j.jmps.2026.106733" --save-full
 python scripts\enrich_elsevier.py --limit 20 --save-full-text
 ```
 
+默认情况下，已经有 `content.elsevier` 或 `content.elsevier_error`
+记录的论文会被跳过，避免重复请求 Elsevier。需要强制重新补全时使用：
+
+```powershell
+python scripts\enrich_elsevier.py --limit 20 --save-full-text --overwrite
+```
+
+如果只想重试之前报错的 Elsevier 记录：
+
+```powershell
+python scripts\enrich_elsevier.py --limit 20 --save-full-text --retry-errors
+```
+
+如果只处理某个期刊：
+
+```powershell
+python scripts\enrich_elsevier.py --journal "International Journal of Solids and Structures" --limit 300 --save-full-text
+```
+
 ### 3. 使用 AI 生成中文文献分析
 
 先分析 1 篇测试：
@@ -211,6 +230,13 @@ python scripts\analyze_papers.py --doi "10.1016/j.jmps.2026.106733"
 
 ```powershell
 python scripts\analyze_papers.py --doi "10.1016/j.jmps.2026.106733" --overwrite
+```
+
+默认情况下，`data/analyses.json` 里已经有分析结果的 DOI 会被跳过。
+如果只处理某个期刊：
+
+```powershell
+python scripts\analyze_papers.py --journal "International Journal of Solids and Structures" --limit 300
 ```
 
 输出文件：

@@ -39,6 +39,11 @@ def parse_args() -> argparse.Namespace:
         help="Only enrich this DOI. Can be used multiple times.",
     )
     parser.add_argument(
+        "--journal",
+        default="",
+        help="Only enrich papers whose journal name matches this value.",
+    )
+    parser.add_argument(
         "--api-key",
         default=os.environ.get("ELSEVIER_API_KEY", ""),
         help="Elsevier API key. Defaults to ELSEVIER_API_KEY environment variable.",
@@ -67,6 +72,16 @@ def parse_args() -> argparse.Namespace:
         "--dry-run",
         action="store_true",
         help="Request data and print a summary without writing papers.json.",
+    )
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Re-fetch papers that already have Elsevier enrichment data.",
+    )
+    parser.add_argument(
+        "--retry-errors",
+        action="store_true",
+        help="Retry papers that previously returned an Elsevier error.",
     )
     return parser.parse_args()
 
@@ -232,11 +247,55 @@ def save_full_text_file(doi: str, title: str, full_text: str) -> str:
     return str(path.relative_to(ROOT))
 
 
-def selected_papers(papers: list[dict[str, Any]], args: argparse.Namespace) -> list[dict[str, Any]]:
+def journal_matches(paper: dict[str, Any], journal: str) -> bool:
+    if not journal:
+        return True
+    names = [
+        str(paper.get("journal", "")),
+        str(paper.get("container_title", "")),
+    ]
+    return any(journal.lower() in name.lower() for name in names)
+
+
+def has_elsevier_result(paper: dict[str, Any], retry_errors: bool) -> bool:
+    content = paper.get("content", {})
+    if content.get("elsevier"):
+        return True
+    if content.get("elsevier_error") and not retry_errors:
+        return True
+    return False
+
+
+def selected_papers(
+    papers: list[dict[str, Any]],
+    args: argparse.Namespace,
+) -> tuple[list[dict[str, Any]], dict[str, int]]:
     if args.doi:
         wanted = {doi.lower() for doi in args.doi}
-        return [paper for paper in papers if str(paper.get("doi", "")).lower() in wanted]
-    return papers[args.offset : args.offset + args.limit]
+        candidates = [paper for paper in papers if str(paper.get("doi", "")).lower() in wanted]
+    else:
+        candidates = papers[args.offset :]
+
+    selected = []
+    stats = {
+        "candidates": 0,
+        "skipped_journal": 0,
+        "skipped_existing": 0,
+        "selected": 0,
+    }
+    for paper in candidates:
+        stats["candidates"] += 1
+        if not journal_matches(paper, args.journal):
+            stats["skipped_journal"] += 1
+            continue
+        if not args.overwrite and has_elsevier_result(paper, args.retry_errors):
+            stats["skipped_existing"] += 1
+            continue
+        selected.append(paper)
+        stats["selected"] += 1
+        if not args.doi and len(selected) >= args.limit:
+            break
+    return selected, stats
 
 
 def main() -> int:
@@ -249,9 +308,16 @@ def main() -> int:
         return 2
 
     papers = load_papers()
-    targets = selected_papers(papers, args)
+    targets, stats = selected_papers(papers, args)
+    print(
+        "[ELSEVIER QUEUE]"
+        f" candidates={stats['candidates']},"
+        f" selected={stats['selected']},"
+        f" skipped_existing={stats['skipped_existing']},"
+        f" skipped_journal={stats['skipped_journal']}"
+    )
     if not targets:
-        print("No papers selected.")
+        print("[SKIP] No papers selected for Elsevier. Existing enrichment/error records were skipped.")
         return 0
 
     updated = 0
@@ -260,7 +326,7 @@ def main() -> int:
         if not doi:
             continue
 
-        print(f"[{index}/{len(targets)}] {doi}")
+        print(f"[ELSEVIER {index}/{len(targets)}] START {doi}")
         try:
             payload = request_elsevier(doi, args.api_key, args.insttoken)
             content = extract_elsevier_content(
@@ -284,7 +350,10 @@ def main() -> int:
                 "reason": error.reason,
                 "retrieved_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
             }
-            print(f"  Elsevier returned HTTP {error.code}: {error.reason}")
+            print(f"[ELSEVIER {index}/{len(targets)}] ERROR HTTP {error.code}: {error.reason}")
+            if not args.dry_run:
+                save_papers(papers)
+                print(f"[WRITE] Saved progress after Elsevier error to {DATA_FILE}")
             continue
         except Exception as error:
             paper.setdefault("content", {})["elsevier_error"] = {
@@ -292,7 +361,10 @@ def main() -> int:
                 "reason": str(error),
                 "retrieved_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
             }
-            print(f"  Request failed: {error}")
+            print(f"[ELSEVIER {index}/{len(targets)}] ERROR request failed: {error}")
+            if not args.dry_run:
+                save_papers(papers)
+                print(f"[WRITE] Saved progress after Elsevier error to {DATA_FILE}")
             continue
 
         paper.setdefault("content", {})["elsevier"] = content
@@ -303,21 +375,23 @@ def main() -> int:
 
         updated += 1
         print(
-            "  ok:"
+            f"[ELSEVIER {index}/{len(targets)}] OK"
             f" abstract={'yes' if content.get('abstract') else 'no'},"
             f" keywords={len(content.get('keywords', []))},"
             f" sections={len(content.get('sections', []))},"
             f" full_text_chars={content.get('available_text_chars', 0)}"
         )
+        if not args.dry_run:
+            save_papers(papers)
+            print(f"[WRITE] Saved progress: Elsevier data for {doi} to {DATA_FILE}")
         time.sleep(0.25)
 
-    if not args.dry_run:
-        save_papers(papers)
-        print(f"Updated {DATA_FILE}")
+    if args.dry_run:
+        print("[DRY-RUN] papers.json was not changed.")
     else:
-        print("Dry run only; papers.json was not changed.")
+        print(f"[WRITE] Final paper count: {len(papers)} records in {DATA_FILE}")
 
-    print(f"Elsevier-enriched records: {updated}/{len(targets)}")
+    print(f"[ELSEVIER SUMMARY] enriched={updated}, selected={len(targets)}, skipped_existing={stats['skipped_existing']}")
     return 0
 
 
