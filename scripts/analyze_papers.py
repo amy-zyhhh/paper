@@ -11,191 +11,53 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from env_loader import load_dotenv
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "papers.json"
 ANALYSES_FILE = ROOT / "data" / "analyses.json"
 DEFAULT_OPENAI_BASE_URL = "https://llmapi.paratera.com/v1"
+ANALYSIS_TYPE = "abstract_translation"
+
+load_dotenv()
 
 
-ANALYSIS_SCHEMA: dict[str, Any] = {
-    "type": "object",
-    "additionalProperties": False,
-    "properties": {
-        "paper_info": {
-            "type": "object",
-            "additionalProperties": False,
-            "properties": {
-                "title": {"type": "string"},
-                "doi": {"type": "string"},
-                "date": {"type": "string"},
-                "authors": {"type": "array", "items": {"type": "string"}},
-                "author_affiliations": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "additionalProperties": False,
-                        "properties": {
-                            "author": {"type": "string"},
-                            "affiliations": {
-                                "type": "array",
-                                "items": {"type": "string"},
-                            },
-                        },
-                        "required": ["author", "affiliations"],
-                    },
-                },
-            },
-            "required": ["title", "doi", "date", "authors", "author_affiliations"],
-        },
-        "analysis": {
-            "type": "object",
-            "additionalProperties": False,
-            "properties": {
-                "what_was_done": {"type": "string"},
-                "why_it_was_done": {"type": "string"},
-                "how_it_was_done": {"type": "string"},
-                "how_well_it_worked": {"type": "string"},
-                "main_conclusions": {"type": "array", "items": {"type": "string"}},
-                "highlights_and_innovations": {"type": "array", "items": {"type": "string"}},
-                "limitations": {"type": "array", "items": {"type": "string"}},
-                "future_directions": {"type": "array", "items": {"type": "string"}},
-                "cautions": {"type": "array", "items": {"type": "string"}},
-                "keywords": {"type": "array", "items": {"type": "string"}},
-                "suitable_for": {"type": "array", "items": {"type": "string"}},
-                "reading_priority": {"type": "string", "enum": ["high", "medium", "low"]},
-                "priority_reason": {"type": "string"},
-            },
-            "required": [
-                "what_was_done",
-                "why_it_was_done",
-                "how_it_was_done",
-                "how_well_it_worked",
-                "main_conclusions",
-                "highlights_and_innovations",
-                "limitations",
-                "future_directions",
-                "cautions",
-                "keywords",
-                "suitable_for",
-                "reading_priority",
-                "priority_reason",
-            ],
-        },
-    },
-    "required": ["paper_info", "analysis"],
-}
-
-
-PROMPT_TEMPLATE = """你是一名力学方向的研究助理，擅长阅读专业论文。请基于我提供的论文全文或可用文本，生成一份中文文献分析笔记。
+PROMPT_TEMPLATE = """你是一名力学方向的学术翻译助手。请只根据我提供的英文摘要，将其翻译成准确、自然、适合研究人员阅读的中文。
 
 要求：
-1. 只根据提供的文本回答，不要编造文本中没有的信息。
-2. 如果某一项信息在文本中不充分，请明确写“原文信息不足”。
-3. 区分作者明确陈述的内容和你基于文本做出的合理推断。
-4. 回答要面向研究人员，准确、简洁、有技术含量。
-5. 不要大段翻译原文，不要摘录长段原文。
-6. 保留必要的英文术语，例如 phase-field, homogenization, finite deformation, crystal plasticity 等。
-7. 输出必须是 JSON，不要添加 JSON 之外的解释文字。
-8. 如果作者单位信息缺失，请在 author_affiliations 中写“原文信息不足”。
+1. 只翻译摘要，不要扩展、总结、解释或添加原文没有的信息。
+2. 保留必要英文术语，例如 phase-field, homogenization, finite deformation, crystal plasticity 等。
+3. 数学符号、缩写、材料名、方法名和专有名词应尽量保持准确。
+4. 输出必须是 JSON，不要添加 JSON 之外的解释文字。
 
 请按照以下 JSON 结构输出：
-
 {
-  "paper_info": {
-    "title": "论文标题",
-    "doi": "DOI",
-    "date": "发表日期或在线发表日期",
-    "authors": [
-      "作者 1",
-      "作者 2"
-    ],
-    "author_affiliations": [
-      {
-        "author": "作者名",
-        "affiliations": [
-          "单位 1",
-          "单位 2"
-        ]
-      }
-    ]
-  },
-  "analysis": {
-    "what_was_done": "文章做了什么工作？概括研究对象、核心问题和主要任务。",
-    "why_it_was_done": "为什么要做这个工作？说明研究背景、已有方法的不足、科学或工程动机。",
-    "how_it_was_done": "怎么做的？总结理论模型、实验方法、数值方法、数据来源、验证方式等。",
-    "how_well_it_worked": "做得怎么样？总结主要性能、验证结果、对比结果、适用范围。如果原文没有充分评价，请说明。",
-    "main_conclusions": [
-      "主要结论 1",
-      "主要结论 2",
-      "主要结论 3"
-    ],
-    "highlights_and_innovations": [
-      "亮点或创新点 1",
-      "亮点或创新点 2",
-      "亮点或创新点 3"
-    ],
-    "limitations": [
-      "局限性 1",
-      "局限性 2"
-    ],
-    "future_directions": [
-      "可能的发展方向 1",
-      "可能的发展方向 2"
-    ],
-    "cautions": [
-      "阅读或使用该工作的注意事项 1",
-      "注意事项 2"
-    ],
-    "keywords": [
-      "关键词 1",
-      "关键词 2",
-      "关键词 3"
-    ],
-    "suitable_for": [
-      "适合关注该方向的读者或研究问题"
-    ],
-    "reading_priority": "high / medium / low",
-    "priority_reason": "为什么给出这个阅读优先级。"
-  }
+  "abstract_translation": "中文摘要翻译"
 }
 
-论文信息如下：
-
-标题：
+论文标题：
 {title}
 
 DOI：
 {doi}
 
-日期：
-{date}
-
-作者：
-{authors}
-
-作者单位：
-{author_affiliations}
-
-摘要：
+英文摘要：
 {abstract}
-
-全文或正文片段：
-{full_text}
 """
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Analyze locally saved JMPS full text with the OpenAI API."
+        description="Translate paper abstracts with an OpenAI-compatible API."
     )
-    parser.add_argument("--limit", type=int, default=1, help="Maximum papers to analyze.")
+    parser.add_argument("--limit", type=int, default=1, help="Maximum papers to translate.")
     parser.add_argument("--offset", type=int, default=0, help="Start at this paper index.")
-    parser.add_argument("--doi", action="append", default=[], help="Analyze this DOI only.")
+    parser.add_argument("--doi", action="append", default=[], help="Translate this DOI only.")
     parser.add_argument(
         "--journal",
         default="",
-        help="Only analyze papers whose journal name matches this value.",
+        help="Only translate papers whose journal name matches this value.",
     )
     parser.add_argument(
         "--model",
@@ -213,15 +75,9 @@ def parse_args() -> argparse.Namespace:
         help="OpenAI-compatible API base URL. Defaults to https://llmapi.paratera.com/v1.",
     )
     parser.add_argument(
-        "--max-chars",
-        type=int,
-        default=60000,
-        help="Maximum full-text characters sent per paper.",
-    )
-    parser.add_argument(
         "--overwrite",
         action="store_true",
-        help="Re-analyze papers that already have an analysis.",
+        help="Re-translate abstracts that already have a translation.",
     )
     parser.add_argument("--dry-run", action="store_true", help="Build prompts without API calls.")
     return parser.parse_args()
@@ -244,55 +100,38 @@ def save_json(path: Path, data: list[dict[str, Any]]) -> None:
         file.write("\n")
 
 
-def author_affiliations(paper: dict[str, Any]) -> list[dict[str, Any]]:
-    details = paper.get("author_details", [])
-    if not details:
-        return [
-            {"author": author, "affiliations": ["原文信息不足"]}
-            for author in paper.get("authors", [])
-        ]
-    output = []
-    for detail in details:
-        affiliations = detail.get("affiliations") or ["原文信息不足"]
-        output.append({"author": detail.get("name", ""), "affiliations": affiliations})
-    return output
-
-
-def local_full_text_path(paper: dict[str, Any]) -> Path | None:
-    path = (
+def abstract_text(paper: dict[str, Any]) -> str:
+    elsevier_abstract = (
         paper.get("content", {})
         .get("elsevier", {})
-        .get("full_text_path", "")
+        .get("abstract", "")
     )
-    if not path:
-        return None
-    return ROOT / path
+    return str(paper.get("abstract") or elsevier_abstract or "").strip()
 
 
-def paper_text(paper: dict[str, Any], max_chars: int) -> str:
-    path = local_full_text_path(paper)
-    if path and path.exists():
-        return path.read_text(encoding="utf-8", errors="replace")[:max_chars]
-    content = paper.get("content", {}).get("elsevier", {})
-    full_text = content.get("full_text", "")
-    if full_text:
-        return full_text[:max_chars]
-    return (paper.get("abstract") or content.get("abstract") or "")[:max_chars]
+def journal_matches(paper: dict[str, Any], journal: str) -> bool:
+    if not journal:
+        return True
+    names = [
+        str(paper.get("journal", "")),
+        str(paper.get("container_title", "")),
+    ]
+    return any(journal.lower() in name.lower() for name in names)
 
 
-def make_prompt(paper: dict[str, Any], max_chars: int) -> str:
+def has_translation(record: dict[str, Any] | None) -> bool:
+    if not record:
+        return False
+    if record.get("analysis_type") != ANALYSIS_TYPE:
+        return False
+    return bool(str(record.get("abstract_translation", "")).strip())
+
+
+def make_prompt(paper: dict[str, Any]) -> str:
     replacements = {
-        "{title}": paper.get("title", ""),
-        "{doi}": paper.get("doi", ""),
-        "{date}": paper.get("date", ""),
-        "{authors}": ", ".join(paper.get("authors", [])),
-        "{author_affiliations}": json.dumps(
-            author_affiliations(paper),
-            ensure_ascii=False,
-            indent=2,
-        ),
-        "{abstract}": paper.get("abstract", ""),
-        "{full_text}": paper_text(paper, max_chars),
+        "{title}": str(paper.get("title", "")),
+        "{doi}": str(paper.get("doi", "")),
+        "{abstract}": abstract_text(paper),
     }
     prompt = PROMPT_TEMPLATE
     for placeholder, value in replacements.items():
@@ -304,13 +143,8 @@ def request_openai(prompt: str, model: str, api_key: str, base_url: str) -> dict
     chat_url = f"{base_url.rstrip('/')}/chat/completions"
     payload = {
         "model": model,
-        "messages": [
-            {
-                "role": "user",
-                "content": prompt,
-            }
-        ],
-        "temperature": 0.2,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.1,
         "response_format": {"type": "json_object"},
     }
     request = urllib.request.Request(
@@ -332,23 +166,18 @@ def request_openai(prompt: str, model: str, api_key: str, base_url: str) -> dict
     )
     if not text:
         raise ValueError("OpenAI response did not contain output text.")
-    return json.loads(text)
-
-
-def journal_matches(paper: dict[str, Any], journal: str) -> bool:
-    if not journal:
-        return True
-    names = [
-        str(paper.get("journal", "")),
-        str(paper.get("container_title", "")),
-    ]
-    return any(journal.lower() in name.lower() for name in names)
+    data = json.loads(text)
+    if "abstract_translation" not in data and "translation" in data:
+        data["abstract_translation"] = data["translation"]
+    if not str(data.get("abstract_translation", "")).strip():
+        raise ValueError("OpenAI response did not contain abstract_translation.")
+    return data
 
 
 def selected_papers(
     papers: list[dict[str, Any]],
     args: argparse.Namespace,
-    analyzed_dois: set[str],
+    by_doi: dict[str, dict[str, Any]],
 ) -> tuple[list[dict[str, Any]], dict[str, int]]:
     if args.doi:
         wanted = {doi.lower() for doi in args.doi}
@@ -360,8 +189,9 @@ def selected_papers(
     stats = {
         "candidates": 0,
         "skipped_missing_doi": 0,
+        "skipped_missing_abstract": 0,
         "skipped_journal": 0,
-        "skipped_analyzed": 0,
+        "skipped_translated": 0,
         "selected": 0,
     }
     for paper in candidates:
@@ -373,8 +203,11 @@ def selected_papers(
         if not journal_matches(paper, args.journal):
             stats["skipped_journal"] += 1
             continue
-        if doi in analyzed_dois and not args.overwrite:
-            stats["skipped_analyzed"] += 1
+        if not abstract_text(paper):
+            stats["skipped_missing_abstract"] += 1
+            continue
+        if has_translation(by_doi.get(doi)) and not args.overwrite:
+            stats["skipped_translated"] += 1
             continue
         selected.append(paper)
         stats["selected"] += 1
@@ -391,25 +224,25 @@ def main() -> int:
 
     papers = load_json_array(DATA_FILE)
     analyses = load_json_array(ANALYSES_FILE)
-    by_doi = {str(item.get("doi", "")).lower(): item for item in analyses}
+    by_doi = {str(item.get("doi", "")).lower(): item for item in analyses if item.get("doi")}
 
-    targets, stats = selected_papers(papers, args, set(by_doi.keys()))
+    targets, stats = selected_papers(papers, args, by_doi)
     print(
         "[AI QUEUE]"
         f" candidates={stats['candidates']},"
         f" selected={stats['selected']},"
-        f" skipped_analyzed={stats['skipped_analyzed']},"
+        f" skipped_translated={stats['skipped_translated']},"
         f" skipped_journal={stats['skipped_journal']},"
+        f" skipped_missing_abstract={stats['skipped_missing_abstract']},"
         f" skipped_missing_doi={stats['skipped_missing_doi']}"
     )
     completed = 0
     if not targets:
-        print("[SKIP] No papers selected for AI analysis. Existing analyses were skipped.")
+        print("[SKIP] No papers selected for abstract translation. Existing translations were skipped.")
+
     for index, paper in enumerate(targets, start=1):
         doi = str(paper.get("doi", "")).lower()
-        if not doi:
-            continue
-        prompt = make_prompt(paper, args.max_chars)
+        prompt = make_prompt(paper)
         print(f"[AI {index}/{len(targets)}] START {doi} ({len(prompt)} prompt chars)")
         if args.dry_run:
             print(prompt[:1200])
@@ -417,7 +250,7 @@ def main() -> int:
             continue
 
         try:
-            analysis = request_openai(prompt, args.model, args.api_key, args.base_url)
+            result = request_openai(prompt, args.model, args.api_key, args.base_url)
         except urllib.error.HTTPError as error:
             detail = error.read().decode("utf-8", errors="replace")
             print(f"OpenAI HTTP {error.code}: {detail}", file=sys.stderr)
@@ -431,21 +264,23 @@ def main() -> int:
             "title": paper.get("title", ""),
             "date": paper.get("date", ""),
             "model": args.model,
+            "analysis_type": ANALYSIS_TYPE,
             "analyzed_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-            "analysis": analysis,
+            "abstract": abstract_text(paper),
+            "abstract_translation": str(result["abstract_translation"]).strip(),
         }
         by_doi[doi] = record
         completed += 1
         print(f"[AI {index}/{len(targets)}] OK {doi}")
         save_json(ANALYSES_FILE, sorted(by_doi.values(), key=lambda item: item.get("date", ""), reverse=True))
-        print(f"[WRITE] Saved progress: {len(by_doi)} analyses to {ANALYSES_FILE}")
+        print(f"[WRITE] Saved progress: {len(by_doi)} translation records to {ANALYSES_FILE}")
         time.sleep(0.5)
 
     if args.dry_run:
-        print("[DRY-RUN] No analyses were written.")
+        print("[DRY-RUN] No translations were written.")
     else:
-        print(f"[WRITE] Final analysis count: {len(by_doi)} records in {ANALYSES_FILE}")
-    print(f"[AI SUMMARY] new={completed}, selected={len(targets)}, skipped_analyzed={stats['skipped_analyzed']}")
+        print(f"[WRITE] Final translation count: {len(by_doi)} records in {ANALYSES_FILE}")
+    print(f"[AI SUMMARY] new={completed}, selected={len(targets)}, skipped_translated={stats['skipped_translated']}")
     return 0
 
 

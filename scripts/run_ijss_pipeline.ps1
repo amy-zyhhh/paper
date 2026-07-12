@@ -8,7 +8,7 @@ param(
   [switch]$OverwriteAnalysis,
   [switch]$RetryElsevierErrors,
   [switch]$Publish,
-  [string]$CommitMessage = "Update IJSS papers with abstracts and AI analysis"
+  [string]$CommitMessage = "Update papers with abstracts and abstract translations"
 )
 
 $ErrorActionPreference = "Stop"
@@ -23,6 +23,26 @@ $OpenAIChatEndpoint = "$($OpenAIBaseUrl.TrimEnd('/'))/chat/completions"
 $ProjectRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 Set-Location $ProjectRoot
 
+$EnvFile = Join-Path $ProjectRoot ".env"
+if (Test-Path $EnvFile) {
+  Get-Content $EnvFile | ForEach-Object {
+    $line = $_.Trim()
+    if ($line -and -not $line.StartsWith("#") -and $line.Contains("=")) {
+      $key, $value = $line.Split("=", 2)
+      $key = $key.Trim()
+      $value = $value.Trim().Trim('"').Trim("'")
+      if ($key -and -not [Environment]::GetEnvironmentVariable($key, "Process")) {
+        [Environment]::SetEnvironmentVariable($key, $value, "Process")
+      }
+    }
+  }
+  Write-Host "Loaded local .env configuration." -ForegroundColor DarkGray
+}
+
+$OpenAIBaseUrl = if ($env:OPENAI_BASE_URL) { $env:OPENAI_BASE_URL } else { "https://llmapi.paratera.com/v1" }
+$OpenAIModel = if ($env:OPENAI_MODEL) { $env:OPENAI_MODEL } else { "DeepSeek-V3.2-Thinking" }
+$OpenAIChatEndpoint = "$($OpenAIBaseUrl.TrimEnd('/'))/chat/completions"
+
 Write-Host "== Literature Tracker: IJSS full pipeline ==" -ForegroundColor Cyan
 Write-Host "Project root: $ProjectRoot"
 Write-Host "Journal: $JournalName"
@@ -32,13 +52,13 @@ Write-Host "Limit: $Limit"
 if ($OverwriteElsevier -or $OverwriteAnalysis) {
   Write-Host "Skip behavior: FORCE OVERWRITE is enabled for the selected steps." -ForegroundColor Yellow
   if ($OverwriteElsevier) {
-    Write-Host "  - Elsevier enrichment/full text will be requested again, even if it already exists." -ForegroundColor Yellow
+    Write-Host "  - Elsevier abstract enrichment will be requested again, even if it already exists." -ForegroundColor Yellow
   }
   if ($OverwriteAnalysis) {
-    Write-Host "  - AI analysis will be requested again, even if it already exists." -ForegroundColor Yellow
+  Write-Host "  - AI abstract translation will be requested again, even if it already exists." -ForegroundColor Yellow
   }
 } else {
-  Write-Host "Skip behavior: existing Crossref DOI / Elsevier enrichment / AI analysis are skipped by default"
+  Write-Host "Skip behavior: existing Crossref DOI / Elsevier enrichment / AI abstract translation are skipped by default"
 }
 Write-Host ""
 
@@ -73,12 +93,11 @@ python scripts\fetch_crossref.py `
   --until-date $UntilDate `
   --limit $Limit
 
-Write-Host "== Step 2/6: Enrich with Elsevier abstracts and local full text ==" -ForegroundColor Cyan
+Write-Host "== Step 2/6: Enrich with Elsevier abstracts only ==" -ForegroundColor Cyan
 $elsevierArgs = @(
   "scripts\enrich_elsevier.py",
   "--limit", $Limit,
-  "--journal", $JournalName,
-  "--save-full-text"
+  "--journal", $JournalName
 )
 if ($OverwriteElsevier) {
   $elsevierArgs += "--overwrite"
@@ -92,11 +111,10 @@ python @elsevierArgs
 Equivalent command:
 python scripts\enrich_elsevier.py `
   --limit $Limit `
-  --journal $JournalName `
-  --save-full-text
+  --journal $JournalName
 #>
 
-Write-Host "== Step 3/6: Generate AI analysis for all selected records ==" -ForegroundColor Cyan
+Write-Host "== Step 3/6: Translate abstracts with AI for all selected records ==" -ForegroundColor Cyan
 $analysisArgs = @(
   "scripts\analyze_papers.py",
   "--limit", $Limit,

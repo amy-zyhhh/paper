@@ -14,16 +14,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from env_loader import load_dotenv
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "papers.json"
-FULL_TEXT_DIR = ROOT / "private" / "full_text"
 ELSEVIER_ARTICLE_URL = "https://api.elsevier.com/content/article/doi/{doi}"
+
+load_dotenv()
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Enrich papers.json with abstracts and content metadata from Elsevier."
+        description="Enrich papers.json with abstracts from Elsevier."
     )
     parser.add_argument("--limit", type=int, default=5, help="Maximum papers to request.")
     parser.add_argument(
@@ -52,16 +55,6 @@ def parse_args() -> argparse.Namespace:
         "--insttoken",
         default=os.environ.get("ELSEVIER_INSTTOKEN", ""),
         help="Optional Elsevier institution token.",
-    )
-    parser.add_argument(
-        "--include-full-text",
-        action="store_true",
-        help="Store available full text returned by the API. Use only for private/local notes.",
-    )
-    parser.add_argument(
-        "--save-full-text",
-        action="store_true",
-        help="Save available full text to private/full_text instead of embedding it in papers.json.",
     )
     parser.add_argument(
         "--include-raw",
@@ -196,7 +189,6 @@ def extract_sections(payload: dict[str, Any], max_chars: int = 12000) -> list[di
 
 def extract_elsevier_content(
     payload: dict[str, Any],
-    include_full_text: bool,
     include_raw: bool,
 ) -> dict[str, Any]:
     response = payload.get("full-text-retrieval-response", payload)
@@ -206,45 +198,17 @@ def extract_elsevier_content(
         coredata.get("dc:description")
         or find_first(response, {"dc:description", "description", "abstract", "ce:abstract"})
     )
-    keywords = flatten_keywords(response)
-    sections = extract_sections(response)
-    original_text = clean_text(response.get("originalText", ""))
-
     content = {
         "source": "elsevier",
         "retrieved_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "abstract": abstract,
-        "keywords": keywords,
-        "sections": sections,
-        "has_full_text": bool(original_text or sections),
-        "available_text_chars": len(original_text),
     }
-    if include_full_text and original_text:
-        content["full_text"] = original_text
+    keywords = flatten_keywords(response)
+    if keywords:
+        content["keywords"] = keywords
     if include_raw:
         content["raw"] = payload
     return content
-
-
-def safe_filename(doi: str) -> str:
-    filename = doi.lower()
-    filename = re.sub(r"[^a-z0-9]+", "_", filename)
-    return filename.strip("_") or "paper"
-
-
-def save_full_text_file(doi: str, title: str, full_text: str) -> str:
-    FULL_TEXT_DIR.mkdir(parents=True, exist_ok=True)
-    path = FULL_TEXT_DIR / f"{safe_filename(doi)}.txt"
-    content = "\n".join(
-        [
-            title,
-            doi,
-            "",
-            full_text,
-        ]
-    )
-    path.write_text(content, encoding="utf-8")
-    return str(path.relative_to(ROOT))
 
 
 def journal_matches(paper: dict[str, Any], journal: str) -> bool:
@@ -331,19 +295,8 @@ def main() -> int:
             payload = request_elsevier(doi, args.api_key, args.insttoken)
             content = extract_elsevier_content(
                 payload,
-                include_full_text=args.include_full_text,
                 include_raw=args.include_raw,
             )
-            if args.save_full_text:
-                original_text = clean_text(
-                    payload.get("full-text-retrieval-response", {}).get("originalText", "")
-                )
-                if original_text:
-                    content["full_text_path"] = save_full_text_file(
-                        doi,
-                        str(paper.get("title", "")),
-                        original_text,
-                    )
         except urllib.error.HTTPError as error:
             paper.setdefault("content", {})["elsevier_error"] = {
                 "status": error.code,
@@ -377,9 +330,7 @@ def main() -> int:
         print(
             f"[ELSEVIER {index}/{len(targets)}] OK"
             f" abstract={'yes' if content.get('abstract') else 'no'},"
-            f" keywords={len(content.get('keywords', []))},"
-            f" sections={len(content.get('sections', []))},"
-            f" full_text_chars={content.get('available_text_chars', 0)}"
+            f" keywords={len(content.get('keywords', []))}"
         )
         if not args.dry_run:
             save_papers(papers)

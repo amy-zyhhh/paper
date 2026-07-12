@@ -5,3 +5,4 @@ docs/.bundle/
 __pycache__/
 *.pyc
 private/
+.env

@@ -1,8 +1,8 @@
 ﻿# JMPS 文献追踪与分析网页
 
-这个项目用于追踪 **Journal of the Mechanics and Physics of Solids**
-（JMPS）的文献，抓取论文元数据，补充 Elsevier / ScienceDirect 内容，
-将全文保存在本地，再通过 OpenAI-compatible API 生成中文文献分析笔记，
+这个项目用于追踪力学方向期刊文献，例如 **Journal of the Mechanics and Physics of Solids**
+（JMPS）和 **International Journal of Solids and Structures**（IJSS）。流程会抓取论文元数据，
+补充 Elsevier / ScienceDirect 摘要，再通过 OpenAI-compatible API 将摘要翻译成中文，
 最后用 Jekyll / GitHub Pages 生成网页。
 
 核心原则：
@@ -12,19 +12,18 @@ Python 管数据
 Markdown 管内容
 Jekyll 管页面
 CSS 管样式
-全文只保存在本地
-网页只展示元数据、摘要和 AI 分析结果
+不保存全文
+网页只展示元数据、摘要和 AI 摘要翻译
 ```
 
 ## 项目能做什么
 
 完整流程如下：
 
-1. 从 Crossref 抓取 JMPS 论文元数据。
-2. 用 DOI 从 Elsevier / ScienceDirect 补充摘要和可用正文。
-3. 将可获取的全文保存到本地 `private/full_text/`。
-4. 使用 OpenAI-compatible API 对本地全文做中文分析。
-5. 将分析结果保存到 `data/analyses.json`。
+1. 从 Crossref 抓取论文元数据。
+2. 用 DOI 从 Elsevier / ScienceDirect 补充摘要。
+3. 使用 OpenAI-compatible API 将英文摘要翻译成中文。
+4. 将摘要翻译结果保存到 `data/analyses.json`。
 6. 生成 Jekyll 可识别的 Markdown 页面。
 7. 通过 GitHub Pages 发布网页。
 
@@ -37,11 +36,11 @@ CSS 管样式
 DOI
 摘要
 主题标签
-AI 生成的中文分析笔记
+AI 生成的中文摘要翻译
 出版社链接
 ```
 
-不要公开上传 Elsevier 全文，除非你确认有相应权限。
+当前默认流程不保存 Elsevier 全文，也不会把全文上传到 GitHub。
 
 ## 目录结构
 
@@ -49,7 +48,7 @@ AI 生成的中文分析笔记
 .
 +-- data/
 |   +-- papers.json        # 论文元数据和 Elsevier 补全信息
-|   +-- analyses.json      # AI 生成的中文分析结果
+|   +-- analyses.json      # AI 生成的中文摘要翻译
 +-- docs/
 |   +-- _config.yml        # Jekyll 配置
 |   +-- _layouts/          # Jekyll 页面模板
@@ -62,8 +61,8 @@ AI 生成的中文分析笔记
 +-- scripts/
 |   +-- fetch_crossref.py  # 从 Crossref 抓取任意期刊元数据
 |   +-- fetch_jmps.py      # JMPS 专用抓取脚本，兼容旧流程
-|   +-- enrich_elsevier.py # 从 Elsevier 补摘要和全文
-|   +-- analyze_papers.py  # 调用 AI 生成中文分析
+|   +-- enrich_elsevier.py # 从 Elsevier 补摘要
+|   +-- analyze_papers.py  # 调用 AI 翻译摘要
 |   +-- render_md.py       # 根据 JSON 生成 Markdown 网页
 +-- .gitignore
 +-- README.md
@@ -71,9 +70,29 @@ AI 生成的中文分析笔记
 
 `private/` 是本地私有目录，不应上传到 GitHub。
 
-## 环境变量
+## API 配置
 
-在 PowerShell 中设置 API key：
+推荐在项目根目录创建 `.env` 文件。`.env` 已被 `.gitignore` 忽略，不会上传到 GitHub。
+
+可以先复制模板：
+
+```powershell
+Copy-Item .env.example .env
+```
+
+然后填写：
+
+```env
+ELSEVIER_API_KEY=你的 Elsevier API Key
+ELSEVIER_INSTTOKEN=
+OPENAI_API_KEY=你的 OpenAI-compatible API Key
+OPENAI_BASE_URL=https://llmapi.paratera.com/v1
+OPENAI_MODEL=DeepSeek-V3.2-Thinking
+```
+
+`ELSEVIER_INSTTOKEN` 通常可以留空。
+
+也可以临时在 PowerShell 中设置 API key：
 
 ```powershell
 $env:ELSEVIER_API_KEY="你的 Elsevier API Key"
@@ -100,6 +119,40 @@ $env:OPENAI_MODEL="DeepSeek-V3.2-Thinking"
 
 ```powershell
 cd C:\Users\zhou\Desktop\test
+```
+
+### 推荐：一键抓取、翻译并生成网页
+
+抓取 JMPS：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_ijss_pipeline.ps1 `
+  -JournalName "Journal of the Mechanics and Physics of Solids" `
+  -Issn "0022-5096" `
+  -FromDate "2026-06-01" `
+  -UntilDate "2026-07-04" `
+  -Limit 300
+```
+
+抓取 IJSS：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_ijss_pipeline.ps1 `
+  -JournalName "International Journal of Solids and Structures" `
+  -Issn "0020-7683" `
+  -FromDate "2026-06-01" `
+  -UntilDate "2026-07-04" `
+  -Limit 300
+```
+
+这个一键流程会依次执行：
+
+```text
+Crossref 抓取元数据
+Elsevier 补充摘要
+AI 翻译摘要
+生成 Markdown 页面和搜索索引
+Jekyll build
 ```
 
 ### 1. 抓取期刊元数据
@@ -143,7 +196,7 @@ python scripts\fetch_jmps.py --from-date 2025-01-01 --until-date 2026-07-01 --li
 data/papers.json
 ```
 
-### 2. 从 Elsevier 补充摘要和全文
+### 2. 从 Elsevier 补充摘要
 
 补充前几篇论文：
 
@@ -151,88 +204,72 @@ data/papers.json
 python scripts\enrich_elsevier.py --limit 5
 ```
 
-将可获取的全文保存到本地：
-
-```powershell
-python scripts\enrich_elsevier.py --limit 5 --save-full-text
-```
-
 从第 6 篇开始继续处理 20 篇：
 
 ```powershell
-python scripts\enrich_elsevier.py --limit 20 --offset 5 --save-full-text
+python scripts\enrich_elsevier.py --limit 20 --offset 5
 ```
 
 指定某一篇 DOI：
 
 ```powershell
-python scripts\enrich_elsevier.py --doi "10.1016/j.jmps.2026.106733" --save-full-text
-```
-
-重要区别：
-
-```text
---save-full-text
-  推荐使用。将全文保存到 private/full_text/*.txt，
-  papers.json 里只记录本地路径。
-
---include-full-text
-  不推荐。会把全文直接写进 data/papers.json。
-  如果之后 git add / commit / push，可能把全文上传到 GitHub。
+python scripts\enrich_elsevier.py --doi "10.1016/j.jmps.2026.106733"
 ```
 
 推荐默认用法：
 
 ```powershell
-python scripts\enrich_elsevier.py --limit 20 --save-full-text
+python scripts\enrich_elsevier.py --limit 20
 ```
 
 默认情况下，已经有 `content.elsevier` 或 `content.elsevier_error`
 记录的论文会被跳过，避免重复请求 Elsevier。需要强制重新补全时使用：
 
 ```powershell
-python scripts\enrich_elsevier.py --limit 20 --save-full-text --overwrite
+python scripts\enrich_elsevier.py --limit 20 --overwrite
 ```
 
 如果只想重试之前报错的 Elsevier 记录：
 
 ```powershell
-python scripts\enrich_elsevier.py --limit 20 --save-full-text --retry-errors
+python scripts\enrich_elsevier.py --limit 20 --retry-errors
 ```
 
 如果只处理某个期刊：
 
 ```powershell
-python scripts\enrich_elsevier.py --journal "International Journal of Solids and Structures" --limit 300 --save-full-text
+python scripts\enrich_elsevier.py --journal "International Journal of Solids and Structures" --limit 300
 ```
 
-### 3. 使用 AI 生成中文文献分析
+当前默认流程只保存摘要、关键词等轻量信息，不保存全文。
 
-先分析 1 篇测试：
+### 3. 使用 AI 翻译摘要
+
+先翻译 1 篇测试：
 
 ```powershell
 python scripts\analyze_papers.py --limit 1
 ```
 
-继续批量分析：
+继续批量翻译：
 
 ```powershell
 python scripts\analyze_papers.py --limit 5 --offset 1
 ```
 
-指定 DOI 分析：
+指定 DOI 翻译：
 
 ```powershell
 python scripts\analyze_papers.py --doi "10.1016/j.jmps.2026.106733"
 ```
 
-重新分析已经分析过的论文：
+重新翻译已经处理过的论文：
 
 ```powershell
 python scripts\analyze_papers.py --doi "10.1016/j.jmps.2026.106733" --overwrite
 ```
 
-默认情况下，`data/analyses.json` 里已经有分析结果的 DOI 会被跳过。
+默认情况下，`data/analyses.json` 里已经有摘要翻译结果的 DOI 会被跳过。
 如果只处理某个期刊：
 
 ```powershell
@@ -245,19 +282,10 @@ python scripts\analyze_papers.py --journal "International Journal of Solids and 
 data/analyses.json
 ```
 
-AI 分析会回答这些问题：
+AI 输出内容：
 
 ```text
-文章做了什么工作
-为什么要做这个工作
-怎么做的
-做得怎么样
-主要结论是什么
-亮点和创新点是什么
-有哪些局限性
-可能的发展方向
-阅读或使用时的注意事项
-关键词
+英文摘要的中文翻译
 适合哪些读者或研究问题
 阅读优先级
 阅读优先级理由
@@ -525,7 +553,7 @@ docs/search-index.json
 ```text
 论文元数据
 摘要
-AI 生成的分析笔记
+AI 生成的中文摘要翻译
 出版社链接
 主题标签
 ```
@@ -533,14 +561,12 @@ AI 生成的分析笔记
 应只保存在本地的内容：
 
 ```text
-Elsevier 全文
-原始下载正文
 API key
 任何受版权或订阅限制的内容
 ```
 
 不要将 `private/` 上传到 GitHub。
-不要轻易使用 `--include-full-text`。
+当前默认流程不保存全文。
 
 ## 推荐完整更新流程
 
@@ -548,12 +574,13 @@ API key
 
 ```powershell
 cd C:\Users\zhou\Desktop\test
-python scripts\fetch_crossref.py --issn 0022-5096 --journal "Journal of the Mechanics and Physics of Solids" --from-date 2025-01-01 --until-date 2026-07-01 --limit 300
-python scripts\enrich_elsevier.py --limit 20 --save-full-text
-python scripts\analyze_papers.py --limit 5
-python scripts\render_md.py
+powershell -ExecutionPolicy Bypass -File scripts\run_ijss_pipeline.ps1 `
+  -JournalName "Journal of the Mechanics and Physics of Solids" `
+  -Issn "0022-5096" `
+  -FromDate "2026-06-01" `
+  -UntilDate "2026-07-04" `
+  -Limit 300
 cd docs
-bundle exec jekyll build
 bundle exec jekyll serve
 ```
 
@@ -606,22 +633,6 @@ response_format: {"type": "json_object"}
 如果服务商不支持 `response_format`，可以在 `request_openai()` 中删除该字段，
 然后依靠提示词要求模型“只输出 JSON”。
 
-### 不小心把全文写进 `papers.json`
-
-如果运行过：
-
-```powershell
-python scripts\enrich_elsevier.py --include-full-text
-```
-
-提交前务必检查 `data/papers.json`。
-
-推荐只使用：
-
-```powershell
-python scripts\enrich_elsevier.py --save-full-text
-```
-
 ## 后续可改进方向
 
 可以考虑继续增加：
@@ -631,11 +642,6 @@ python scripts\enrich_elsevier.py --save-full-text
 按阅读优先级筛选
 按关键词搜索
 按年份/月份/主题过滤
-AI 自动生成主题标签
 GitHub Actions 定时更新元数据
-更精细的论文推荐评分
 ```
-
-如果以后要大规模分析全文，建议控制批量大小，先用 `--limit 1`
-测试输出质量，再逐步扩大。
 

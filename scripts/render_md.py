@@ -28,11 +28,11 @@ ZH_JOURNAL = "\u671f\u520a"
 ZH_KEYWORDS = "\u5173\u952e\u8bcd"
 ZH_TOPIC = "\u4e3b\u9898"
 ZH_ABSTRACT = "\u6458\u8981"
-ZH_AI = "AI \u5206\u6790"
+ZH_AI = "AI \u6458\u8981\u7ffb\u8bd1"
 ZH_BACK_INDEX = "\u8fd4\u56de\u6587\u732e\u7d22\u5f15"
 ZH_PUBLISHER = "\u51fa\u7248\u793e\u9875\u9762"
 ZH_NO_INFO = "\u539f\u6587\u4fe1\u606f\u4e0d\u8db3"
-ZH_NO_ABSTRACT = "\u6682\u65e0\u6458\u8981\u6216 AI \u5206\u6790\u3002"
+ZH_NO_ABSTRACT = "\u6682\u65e0\u6458\u8981\u6216 AI \u6458\u8981\u7ffb\u8bd1\u3002"
 
 
 def load_papers() -> list[dict[str, Any]]:
@@ -137,9 +137,9 @@ def abstract_text(paper: dict[str, Any]) -> str:
 
 
 def short_description(paper: dict[str, Any], analysis: dict[str, Any] | None) -> str:
-    what = text_from_analysis(analysis, "what_was_done")
-    if what:
-        return what
+    translation = str((analysis or {}).get("abstract_translation", "") or "")
+    if translation:
+        return translation
     abstract = abstract_text(paper)
     if abstract:
         return abstract
@@ -191,33 +191,17 @@ def list_items(values: list[str]) -> str:
 def analysis_html(record: dict[str, Any] | None) -> str:
     if not record:
         return ""
-    analysis = record.get("analysis", {}).get("analysis", {})
-    if not analysis:
-        return ""
-    return "\n".join(
-        [
-            '<section class="ai-notes">',
-            f"<h2>{ZH_AI}</h2>",
-            f"<p><strong>\u6587\u7ae0\u505a\u4e86\u4ec0\u4e48\uff1a</strong>{escape(analysis.get('what_was_done', ZH_NO_INFO))}</p>",
-            f"<p><strong>\u4e3a\u4ec0\u4e48\u505a\uff1a</strong>{escape(analysis.get('why_it_was_done', ZH_NO_INFO))}</p>",
-            f"<p><strong>\u600e\u4e48\u505a\uff1a</strong>{escape(analysis.get('how_it_was_done', ZH_NO_INFO))}</p>",
-            f"<p><strong>\u505a\u5f97\u600e\u4e48\u6837\uff1a</strong>{escape(analysis.get('how_well_it_worked', ZH_NO_INFO))}</p>",
-            "<h3>\u4e3b\u8981\u7ed3\u8bba</h3>",
-            list_items(list_from_analysis(record, "main_conclusions")),
-            "<h3>\u4eae\u70b9\u548c\u521b\u65b0\u70b9</h3>",
-            list_items(list_from_analysis(record, "highlights_and_innovations")),
-            "<h3>\u5c40\u9650\u6027</h3>",
-            list_items(list_from_analysis(record, "limitations")),
-            "<h3>\u53ef\u80fd\u7684\u53d1\u5c55\u65b9\u5411</h3>",
-            list_items(list_from_analysis(record, "future_directions")),
-            "<h3>\u6ce8\u610f\u4e8b\u9879</h3>",
-            list_items(list_from_analysis(record, "cautions")),
-            f"<p><strong>{ZH_KEYWORDS}\uff1a</strong>{escape(', '.join(list_from_analysis(record, 'keywords')) or ZH_NO_INFO)}</p>",
-            f"<p><strong>\u9002\u5408\u8bfb\u8005\uff1a</strong>{escape(', '.join(list_from_analysis(record, 'suitable_for')) or ZH_NO_INFO)}</p>",
-            f"<p><strong>\u9605\u8bfb\u4f18\u5148\u7ea7\uff1a</strong>{escape(str(analysis.get('reading_priority', '')))}\u3002{escape(str(analysis.get('priority_reason', '')))}</p>",
-            "</section>",
-        ]
-    )
+    translation = str(record.get("abstract_translation", "") or "").strip()
+    if translation:
+        return "\n".join(
+            [
+                '<section class="ai-notes">',
+                f"<h2>{ZH_AI}</h2>",
+                f"<p>{escape(translation)}</p>",
+                "</section>",
+            ]
+        )
+    return ""
 
 
 def paper_list_item(paper: dict[str, Any], analyses: dict[str, dict[str, Any]]) -> str:
@@ -229,8 +213,9 @@ def paper_list_item(paper: dict[str, Any], analyses: dict[str, dict[str, Any]]) 
     date_text = escape(str(paper.get("date", "\u672a\u77e5\u65e5\u671f")))
     doi = escape(str(paper.get("doi", "")))
     journal = escape(journal_name(paper))
-    priority = escape(text_from_analysis(analysis, "reading_priority"))
-    priority_html = f'<span class="badge">\u9605\u8bfb\u4f18\u5148\u7ea7\uff1a{priority}</span>' if priority else ""
+    priority_html = ""
+    if str((analysis or {}).get("abstract_translation", "") or "").strip():
+        priority_html = '<span class="badge">AI 摘要翻译</span>'
 
     return "\n".join(
         [
@@ -282,7 +267,7 @@ def render_index(papers: list[dict[str, Any]], analyses: dict[str, dict[str, Any
         "",
         f"\u6700\u540e\u66f4\u65b0\uff1a{date.today().isoformat()}",
         "",
-        "\u8fd9\u91cc\u5217\u51fa\u6700\u8fd1\u8ffd\u8e2a\u7684\u8bba\u6587\u3002\u70b9\u51fb\u6807\u9898\u8fdb\u5165\u8be6\u60c5\u9875\uff0c\u67e5\u770b\u6458\u8981\u548c AI \u5206\u6790\u3002",
+        "\u8fd9\u91cc\u5217\u51fa\u6700\u8fd1\u8ffd\u8e2a\u7684\u8bba\u6587\u3002\u70b9\u51fb\u6807\u9898\u8fdb\u5165\u8be6\u60c5\u9875\uff0c\u67e5\u770b\u6458\u8981\u548c AI \u6458\u8981\u7ffb\u8bd1\u3002",
         "",
         f"\u5f53\u524d\u5171\u8ffd\u8e2a {len(papers)} \u7bc7\u8bba\u6587\uff0c\u8986\u76d6 {len(journals)} \u4e2a\u671f\u520a\u3002",
         "",
@@ -351,14 +336,10 @@ def render_topic_pages(papers: list[dict[str, Any]], analyses: dict[str, dict[st
 def analysis_search_text(record: dict[str, Any] | None) -> str:
     if not record:
         return ""
-    analysis = record.get("analysis", {}).get("analysis", {})
-    parts: list[str] = []
-    for value in analysis.values():
-        if isinstance(value, list):
-            parts.extend(str(item) for item in value)
-        else:
-            parts.append(str(value))
-    return " ".join(parts)
+    translation = str(record.get("abstract_translation", "") or "").strip()
+    if translation:
+        return translation
+    return ""
 
 
 def render_search_index(papers: list[dict[str, Any]], analyses: dict[str, dict[str, Any]]) -> None:
@@ -395,7 +376,7 @@ def render_search_page() -> None:
         f"# {ZH_SEARCH}",
         "",
         '<div class="search-panel">',
-        '<input id="search-input" class="search-input" type="search" placeholder="输入标题、作者、关键词、主题、DOI 或 AI 分析内容">',
+        '<input id="search-input" class="search-input" type="search" placeholder="输入标题、作者、关键词、主题、DOI、摘要或摘要翻译">',
         '<div class="search-modes" role="radiogroup" aria-label="搜索模式">',
         '<label><input type="radio" name="search-mode" value="global" checked> 全局搜索</label>',
         '<label><input type="radio" name="search-mode" value="keyword"> 关键词/主题</label>',
