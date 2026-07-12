@@ -1,0 +1,22 @@
+[
+  {
+    "key": "jmps",
+    "name": "Journal of the Mechanics and Physics of Solids",
+    "issn": "0022-5096",
+    "aliases": [
+      "jmps",
+      "mechanics and physics of solids"
+    ],
+    "enabled": true
+  },
+  {
+    "key": "ijss",
+    "name": "International Journal of Solids and Structures",
+    "issn": "0020-7683",
+    "aliases": [
+      "ijss",
+      "solids and structures"
+    ],
+    "enabled": true
+  }
+]

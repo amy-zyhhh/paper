@@ -1,0 +1,1084 @@
+{
+  "updated_at": "2026-07-12T08:19:47+00:00",
+  "count": 154,
+  "items": {
+    "10.1016/j.ijsolstr.2026.113882": {
+      "doi": "10.1016/j.ijsolstr.2026.113882",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Inverse differential quadrature based shell strong unified formulation for 3D stress analysis of composite shell structures"
+    },
+    "10.1016/j.ijsolstr.2026.113928": {
+      "doi": "10.1016/j.ijsolstr.2026.113928",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Seismic damage prediction in concrete gravity dams using a new framework based on Machine learning"
+    },
+    "10.1016/j.ijsolstr.2026.113930": {
+      "doi": "10.1016/j.ijsolstr.2026.113930",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A time spectral numerical manifold method for efficient elastodynamic analysis"
+    },
+    "10.1016/j.ijsolstr.2026.113940": {
+      "doi": "10.1016/j.ijsolstr.2026.113940",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A fluid–peridynamic structure model of deformation and damage of microchannels"
+    },
+    "10.1016/j.ijsolstr.2026.113946": {
+      "doi": "10.1016/j.ijsolstr.2026.113946",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Mixed-mode traction–separation laws for crystalline UHMWPE interphases derived from molecular dynamics"
+    },
+    "10.1016/j.ijsolstr.2026.113947": {
+      "doi": "10.1016/j.ijsolstr.2026.113947",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Mechanical performance of equilateral triangular lattices: The role of nodal fillets"
+    },
+    "10.1016/j.ijsolstr.2026.113948": {
+      "doi": "10.1016/j.ijsolstr.2026.113948",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Stress-induced coupling of electromigration and electrochemical corrosion"
+    },
+    "10.1016/j.ijsolstr.2026.113949": {
+      "doi": "10.1016/j.ijsolstr.2026.113949",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Investigation of a novel space-filling polyhedral unit for construction applications"
+    },
+    "10.1016/j.ijsolstr.2026.113950": {
+      "doi": "10.1016/j.ijsolstr.2026.113950",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Energy-based fracture criterion and interaction integral method for anti-plane cracks in nonhomogeneous micropolar materials"
+    },
+    "10.1016/j.ijsolstr.2026.113951": {
+      "doi": "10.1016/j.ijsolstr.2026.113951",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Inverse prediction and data augmentation of concrete failure behavior under high impact loads based on physics-consistent machine learning"
+    },
+    "10.1016/j.ijsolstr.2026.113952": {
+      "doi": "10.1016/j.ijsolstr.2026.113952",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Thermal-mechanical computational continua approach of composite structures"
+    },
+    "10.1016/j.ijsolstr.2026.113959": {
+      "doi": "10.1016/j.ijsolstr.2026.113959",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Bending response and impact resistance of reinforced re-entrant honeycomb sandwich beams based on additive manufacturing"
+    },
+    "10.1016/j.ijsolstr.2026.113961": {
+      "doi": "10.1016/j.ijsolstr.2026.113961",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Buckling of fully-connected lattices with load-induced boundary rotation imperfections"
+    },
+    "10.1016/j.ijsolstr.2026.113962": {
+      "doi": "10.1016/j.ijsolstr.2026.113962",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "An anisotropic damage model for the mechanical and chemo-mechanical coupling behaviors of double-network hydrogels"
+    },
+    "10.1016/j.ijsolstr.2026.113963": {
+      "doi": "10.1016/j.ijsolstr.2026.113963",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Digital programming of deformation and energy absorption in TPMS metamaterials via binary image encoding"
+    },
+    "10.1016/j.ijsolstr.2026.113964": {
+      "doi": "10.1016/j.ijsolstr.2026.113964",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A hyperelastic constitutive model for compressible particle-reinforced neo-Hookean elastomers with interphases at finite deformation"
+    },
+    "10.1016/j.ijsolstr.2026.113965": {
+      "doi": "10.1016/j.ijsolstr.2026.113965",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Impact dynamics of three-dimensional horseshoe microstructure lattice under indentation deformation"
+    },
+    "10.1016/j.ijsolstr.2026.113966": {
+      "doi": "10.1016/j.ijsolstr.2026.113966",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "MPA-optimized conv-NPR honeycomb metamaterial: Multi-resonant coupling for low-freq broadband near-perfect absorption"
+    },
+    "10.1016/j.ijsolstr.2026.113967": {
+      "doi": "10.1016/j.ijsolstr.2026.113967",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Atomistic insights on the shear properties of the Diamond/SiC interface"
+    },
+    "10.1016/j.ijsolstr.2026.113968": {
+      "doi": "10.1016/j.ijsolstr.2026.113968",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Manufacturable curved links as a route to reduce the Poisson’s ratio of auxetic lattice metamaterials"
+    },
+    "10.1016/j.ijsolstr.2026.113969": {
+      "doi": "10.1016/j.ijsolstr.2026.113969",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Flattening of tape-rings"
+    },
+    "10.1016/j.ijsolstr.2026.113970": {
+      "doi": "10.1016/j.ijsolstr.2026.113970",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Buckling behavior of 3D-printed Beetle Elytron-inspired cellular structures with regular and auxetic honeycomb cores: Experimental and numerical study"
+    },
+    "10.1016/j.ijsolstr.2026.113971": {
+      "doi": "10.1016/j.ijsolstr.2026.113971",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "On the direct determination of the right stretch tensor and the admissible region of its principal invariants"
+    },
+    "10.1016/j.ijsolstr.2026.113972": {
+      "doi": "10.1016/j.ijsolstr.2026.113972",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Deep indentation model of thin film: Theory, experiment and application"
+    },
+    "10.1016/j.ijsolstr.2026.113973": {
+      "doi": "10.1016/j.ijsolstr.2026.113973",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Interphase-mediated buckling behavior of soft layered composites: Theoretical modelling and simulations"
+    },
+    "10.1016/j.ijsolstr.2026.113974": {
+      "doi": "10.1016/j.ijsolstr.2026.113974",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Path-following methods for phase-field simulation of quasi-static crack propagation"
+    },
+    "10.1016/j.ijsolstr.2026.113975": {
+      "doi": "10.1016/j.ijsolstr.2026.113975",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Theoretical and numerical analysis of arbitrarily shaped planar cracks in 2D hexagonal piezoelectric quasicrystals"
+    },
+    "10.1016/j.ijsolstr.2026.113976": {
+      "doi": "10.1016/j.ijsolstr.2026.113976",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Exploiting graded auxeticity for tunable tension-induced out-of-plane buckling in elastic plates for shape morphing"
+    },
+    "10.1016/j.ijsolstr.2026.113977": {
+      "doi": "10.1016/j.ijsolstr.2026.113977",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Optimal design of elastoplastic columns against global buckling"
+    },
+    "10.1016/j.ijsolstr.2026.113978": {
+      "doi": "10.1016/j.ijsolstr.2026.113978",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Prestress-induced vibration, mode-shape evolution, and stability of circular cylindrical shells"
+    },
+    "10.1016/j.ijsolstr.2026.113979": {
+      "doi": "10.1016/j.ijsolstr.2026.113979",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Computational homogenization of an initially orthotropic compressible structure using kinematic hardening law to model primary and secondary stages of creep"
+    },
+    "10.1016/j.ijsolstr.2026.113980": {
+      "doi": "10.1016/j.ijsolstr.2026.113980",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Extracting interfacial interactions using elastic field decomposition and a deep complex neural network"
+    },
+    "10.1016/j.ijsolstr.2026.113981": {
+      "doi": "10.1016/j.ijsolstr.2026.113981",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Thermo-mechanically coupled constitutive model for glassy polymers over a wide range of strains and rates"
+    },
+    "10.1016/j.ijsolstr.2026.113982": {
+      "doi": "10.1016/j.ijsolstr.2026.113982",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Surface inertia effects on effective dynamic properties of SH-wave in unidirectional porous materials"
+    },
+    "10.1016/j.ijsolstr.2026.113989": {
+      "doi": "10.1016/j.ijsolstr.2026.113989",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A spatiotemporal framework for strain gradient viscoelasticity: Thermodynamic derivation and numerical implementation"
+    },
+    "10.1016/j.ijsolstr.2026.113991": {
+      "doi": "10.1016/j.ijsolstr.2026.113991",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Mesoscopic mechanism of dynamic crack propagation and branching of pipe under internal detonation loading"
+    },
+    "10.1016/j.ijsolstr.2026.113992": {
+      "doi": "10.1016/j.ijsolstr.2026.113992",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Modeling and simulation of dipped textile cords: Investigating the role of glue in bending response"
+    },
+    "10.1016/j.ijsolstr.2026.113993": {
+      "doi": "10.1016/j.ijsolstr.2026.113993",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Three-dimensional analysis of fretting-fatigue problems under variable normal loading conditions: Correlation between experiments and simulations using a non-local approach"
+    },
+    "10.1016/j.ijsolstr.2026.113994": {
+      "doi": "10.1016/j.ijsolstr.2026.113994",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A strain gradient elastodynamic phase field model for dynamic fracture in heterogeneous materials by multiscale asymptotic homogenization"
+    },
+    "10.1016/j.ijsolstr.2026.113995": {
+      "doi": "10.1016/j.ijsolstr.2026.113995",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Effect of short-range ordering on cyclic deformation of N-containing austenitic High-Mn steels"
+    },
+    "10.1016/j.ijsolstr.2026.113996": {
+      "doi": "10.1016/j.ijsolstr.2026.113996",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Evolving-plasticity-based forming limit prediction for magnesium alloys at elevated temperature"
+    },
+    "10.1016/j.ijsolstr.2026.113997": {
+      "doi": "10.1016/j.ijsolstr.2026.113997",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Shearing rigid–soft granular mixtures: Intrinsic micro–meso signatures underlying critical-state strength"
+    },
+    "10.1016/j.ijsolstr.2026.113998": {
+      "doi": "10.1016/j.ijsolstr.2026.113998",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Rate-dependent electro-mechanical deformation of nematic liquid crystal elastomers"
+    },
+    "10.1016/j.ijsolstr.2026.113999": {
+      "doi": "10.1016/j.ijsolstr.2026.113999",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "An effective method for solving three-dimensional frictional contact problems of multilayer materials considering multiscale rough morphological features"
+    },
+    "10.1016/j.ijsolstr.2026.114000": {
+      "doi": "10.1016/j.ijsolstr.2026.114000",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "The lattice-intersection model for composite cylinders considering intersection effects"
+    },
+    "10.1016/j.ijsolstr.2026.114001": {
+      "doi": "10.1016/j.ijsolstr.2026.114001",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Synergistic effects of fractal order and microscale layering on the compressive response of 3D-printed architected materials"
+    },
+    "10.1016/j.ijsolstr.2026.114002": {
+      "doi": "10.1016/j.ijsolstr.2026.114002",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Symplectic Hamiltonian formulation for stress and deformation in anisotropic auxetic beams"
+    },
+    "10.1016/j.ijsolstr.2026.114003": {
+      "doi": "10.1016/j.ijsolstr.2026.114003",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A multiphysically-based micromechanical model for time-evolutionary piezoresistive behaviors of viscoelastic porous nanocomposites"
+    },
+    "10.1016/j.ijsolstr.2026.114004": {
+      "doi": "10.1016/j.ijsolstr.2026.114004",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A unified variational differential quadrature method-based framework for elastic wave attenuation in two-dimensional metamaterials"
+    },
+    "10.1016/j.ijsolstr.2026.114005": {
+      "doi": "10.1016/j.ijsolstr.2026.114005",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Nonlinear magneto-mechanical responses of hard-magnetic soft beams incorporating shear effects"
+    },
+    "10.1016/j.ijsolstr.2026.114006": {
+      "doi": "10.1016/j.ijsolstr.2026.114006",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Tailoring tensile responses of trilayer heterostructures"
+    },
+    "10.1016/j.ijsolstr.2026.114007": {
+      "doi": "10.1016/j.ijsolstr.2026.114007",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Plane strain problem for a moving interface crack with a contact zone in a 1D piezoelectric quasicrystal"
+    },
+    "10.1016/j.ijsolstr.2026.114008": {
+      "doi": "10.1016/j.ijsolstr.2026.114008",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Membrane wrinkling model for incremental constitutive models based on a plane stress projection procedure and a dynamic relaxation method"
+    },
+    "10.1016/j.ijsolstr.2026.114009": {
+      "doi": "10.1016/j.ijsolstr.2026.114009",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Effect of roller cylindricity error on the stress distribution in multi-layered coatings"
+    },
+    "10.1016/j.ijsolstr.2026.114010": {
+      "doi": "10.1016/j.ijsolstr.2026.114010",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Nonlinear complementarity framework for sliding cable analysis with elastic catenary equation considering frictional nonsmoothness"
+    },
+    "10.1016/j.ijsolstr.2026.114011": {
+      "doi": "10.1016/j.ijsolstr.2026.114011",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Elastodynamic pinhole diffraction by finite interfaces: A semi-analytical framework for directional beaming and inverse source localization"
+    },
+    "10.1016/j.ijsolstr.2026.114012": {
+      "doi": "10.1016/j.ijsolstr.2026.114012",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Surface topology-based wear evolution model integrated with multiscale frictional contact in finite element analysis"
+    },
+    "10.1016/j.ijsolstr.2026.114013": {
+      "doi": "10.1016/j.ijsolstr.2026.114013",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Line-based 4D-printed thermoplastics enabled by layerwise printing speed control: Concept, mechanics, and inverse design"
+    },
+    "10.1016/j.ijsolstr.2026.114014": {
+      "doi": "10.1016/j.ijsolstr.2026.114014",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "The influence of tapered cell walls on the stiffness and strength of hexagonal honeycombs under uniaxial and biaxial loading"
+    },
+    "10.1016/j.ijsolstr.2026.114021": {
+      "doi": "10.1016/j.ijsolstr.2026.114021",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Homogenized anisotropic micromechanical modeling and cyclic mechanical response of fiber network flexible composites"
+    },
+    "10.1016/j.ijsolstr.2026.114025": {
+      "doi": "10.1016/j.ijsolstr.2026.114025",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Strengthening the transition zone of an additively manufactured hybrid TPMS structure for bone scaffold applications"
+    },
+    "10.1016/j.ijsolstr.2026.114026": {
+      "doi": "10.1016/j.ijsolstr.2026.114026",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A strength prediction hybrid framework of fiber reinforced composites by integrating physics-informed deep learning and generative AI"
+    },
+    "10.1016/j.ijsolstr.2026.114027": {
+      "doi": "10.1016/j.ijsolstr.2026.114027",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Study of fracture behavior of α-quartz crystals with trigonal symmetry using combined experimental and modelling techniques"
+    },
+    "10.1016/j.ijsolstr.2026.114028": {
+      "doi": "10.1016/j.ijsolstr.2026.114028",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Intrinsic interfacial shear characterization of tangential cohesive Interface: fully coupled shear-lag modeling and universal PINN inversion strategy"
+    },
+    "10.1016/j.ijsolstr.2026.114029": {
+      "doi": "10.1016/j.ijsolstr.2026.114029",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Constitutive modeling of rubber-like materials based on insights from molecular dynamics simulations"
+    },
+    "10.1016/j.ijsolstr.2026.114033": {
+      "doi": "10.1016/j.ijsolstr.2026.114033",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A constitutive stress–strain law based on acoustoplasticity and nanoproperties of the material defect subsystem"
+    },
+    "10.1016/j.ijsolstr.2026.114034": {
+      "doi": "10.1016/j.ijsolstr.2026.114034",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Analytical solutions for critical loads, causing cylindrical-bending instability, of thick and thin plates without assumptions on through-thickness variations of displacements"
+    },
+    "10.1016/j.ijsolstr.2026.114035": {
+      "doi": "10.1016/j.ijsolstr.2026.114035",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Adhesion modulation induced by surface roughness and electric load in piezoelectric materials"
+    },
+    "10.1016/j.ijsolstr.2026.114037": {
+      "doi": "10.1016/j.ijsolstr.2026.114037",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Elastoplastic constitutive model for concrete based on the cohesive-frictional deformation mechanism"
+    },
+    "10.1016/j.ijsolstr.2026.114048": {
+      "doi": "10.1016/j.ijsolstr.2026.114048",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A reconfigurable auxetic lattice with dual-stress plateaus for spacecraft soft-landing energy absorption"
+    },
+    "10.1016/j.ijsolstr.2026.114136": {
+      "doi": "10.1016/j.ijsolstr.2026.114136",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Extension of scaled boundary finite element method for delamination simulations in laminated composites under three-dimensional framework"
+    },
+    "10.1016/j.ijsolstr.2026.114177": {
+      "doi": "10.1016/j.ijsolstr.2026.114177",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Tunable viscoelasticity in phase-separated soft materials"
+    },
+    "10.1016/j.ijsolstr.2026.114191": {
+      "doi": "10.1016/j.ijsolstr.2026.114191",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "A computationally efficient plastic substructure method for multi-scale explosion analysis"
+    },
+    "10.1016/j.ijsolstr.2026.114193": {
+      "doi": "10.1016/j.ijsolstr.2026.114193",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Interplay of vacuum pressure and adhesion in the pull-off force of octopus-inspired adhesives"
+    },
+    "10.1016/j.ijsolstr.2026.114196": {
+      "doi": "10.1016/j.ijsolstr.2026.114196",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "From single crystals to polycrystals via the finite strain multi-phase HFGMC micromechanics"
+    },
+    "10.1016/j.ijsolstr.2026.114201": {
+      "doi": "10.1016/j.ijsolstr.2026.114201",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Design and impact resistance analysis of sandwich structures with auxetic honeycomb core"
+    },
+    "10.1016/j.ijsolstr.2026.114203": {
+      "doi": "10.1016/j.ijsolstr.2026.114203",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "An analytical-driven multiscale modeling method for the mode I fracture behavior of fiber-reinforced cementitious composites"
+    },
+    "10.1016/j.ijsolstr.2026.114209": {
+      "doi": "10.1016/j.ijsolstr.2026.114209",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "An investigation on damage and fracture mechanisms of PBX under extrusion load using ordinary state-based peridynamics"
+    },
+    "10.1016/j.ijsolstr.2026.114211": {
+      "doi": "10.1016/j.ijsolstr.2026.114211",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Porous bionic nested tubular structures of luffa sponge with orthogonal gradient auxetic layers: design and energy absorption characteristics"
+    },
+    "10.1016/j.ijsolstr.2026.114212": {
+      "doi": "10.1016/j.ijsolstr.2026.114212",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Integration of numerical manifold method with second order cone programming for upper bound limit analysis"
+    },
+    "10.1016/j.ijsolstr.2026.114213": {
+      "doi": "10.1016/j.ijsolstr.2026.114213",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Modal properties of guided waves in waveguides embedded in an infinite poroelastic media using SAFE-PML method"
+    },
+    "10.1016/j.jmps.2026.106549": {
+      "doi": "10.1016/j.jmps.2026.106549",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Configurational forces explain echelon cracks in soft materials"
+    },
+    "10.1016/j.jmps.2026.106564": {
+      "doi": "10.1016/j.jmps.2026.106564",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Unveiling scaling laws for wrinkling in compressed fiber-reinforced bilayers at any elastic mismatch"
+    },
+    "10.1016/j.jmps.2026.106565": {
+      "doi": "10.1016/j.jmps.2026.106565",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "The mechanics of the Less In More Out artificial heart: Modeling fabric-based soft robotic devices"
+    },
+    "10.1016/j.jmps.2026.106566": {
+      "doi": "10.1016/j.jmps.2026.106566",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Programmable mechanical metasurfaces enabled by pre-compressed curved beam architectures"
+    },
+    "10.1016/j.jmps.2026.106567": {
+      "doi": "10.1016/j.jmps.2026.106567",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Damage localization as a bifurcation phenomenon and the resulting fracture patterns in soft materials"
+    },
+    "10.1016/j.jmps.2026.106569": {
+      "doi": "10.1016/j.jmps.2026.106569",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Selecting deformation patterns in Cosserat crystal plasticity by incremental energy minimization"
+    },
+    "10.1016/j.jmps.2026.106570": {
+      "doi": "10.1016/j.jmps.2026.106570",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Trapped fluids and dry zones: Adhesion’s role in soft lubrication instabilities"
+    },
+    "10.1016/j.jmps.2026.106571": {
+      "doi": "10.1016/j.jmps.2026.106571",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Physics-guided inverse design of bio-inspired network metamaterials via a general non-linear mechanical framework for arbitrary curved-beam lattices"
+    },
+    "10.1016/j.jmps.2026.106572": {
+      "doi": "10.1016/j.jmps.2026.106572",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Universal scaling laws and a geometric mapping framework for deep indentation of soft materials"
+    },
+    "10.1016/j.jmps.2026.106573": {
+      "doi": "10.1016/j.jmps.2026.106573",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "A study of short-crack growth behaviour in an AM Ti alloy using an anisotropic phase field model coupled with crystal plasticity"
+    },
+    "10.1016/j.jmps.2026.106574": {
+      "doi": "10.1016/j.jmps.2026.106574",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Capturing flying objects through viscoelastic adhesion"
+    },
+    "10.1016/j.jmps.2026.106575": {
+      "doi": "10.1016/j.jmps.2026.106575",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Microwave damage mechanisms of transparent conductive films"
+    },
+    "10.1016/j.jmps.2026.106576": {
+      "doi": "10.1016/j.jmps.2026.106576",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Initiation of regularized cracks is explained by the coupled criterion"
+    },
+    "10.1016/j.jmps.2026.106583": {
+      "doi": "10.1016/j.jmps.2026.106583",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Effective behavior of heterogeneous media governed by strain gradient elasticity"
+    },
+    "10.1016/j.jmps.2026.106584": {
+      "doi": "10.1016/j.jmps.2026.106584",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Real-time prediction of thin-film wrinkling pattern by cGAN embedded into an innovative framework from 2D results to 3D morphology"
+    },
+    "10.1016/j.jmps.2026.106585": {
+      "doi": "10.1016/j.jmps.2026.106585",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "A variational phase-field model for anisotropic fracture accounting for multiple cohesive lengths"
+    },
+    "10.1016/j.jmps.2026.106588": {
+      "doi": "10.1016/j.jmps.2026.106588",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Unraveling negative strain-rate sensitivity of a quenching & partitioning steel by a crystal plasticity model coupling solute-drag effect"
+    },
+    "10.1016/j.jmps.2026.106589": {
+      "doi": "10.1016/j.jmps.2026.106589",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Machine learning extraction of viscoelastic material properties from full-field deformation measurements"
+    },
+    "10.1016/j.jmps.2026.106590": {
+      "doi": "10.1016/j.jmps.2026.106590",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "The strange mechanics of an elastic rod under null-resultant transverse loads"
+    },
+    "10.1016/j.jmps.2026.106591": {
+      "doi": "10.1016/j.jmps.2026.106591",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "A thermodynamically consistent and length scale-insensitive phase-field methodology suitable for ductile fracture with coupled elastic-plastic driving forces"
+    },
+    "10.1016/j.jmps.2026.106592": {
+      "doi": "10.1016/j.jmps.2026.106592",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Deformation-induced domains in silicone rubber"
+    },
+    "10.1016/j.jmps.2026.106593": {
+      "doi": "10.1016/j.jmps.2026.106593",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "An exact dimension-reduced dynamic theory for developable surfaces and curve-fold origami"
+    },
+    "10.1016/j.jmps.2026.106595": {
+      "doi": "10.1016/j.jmps.2026.106595",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Crack-tip deformation transitions and fracture mechanisms in glassy polymers revealed by particle-continuum coupling simulations"
+    },
+    "10.1016/j.jmps.2026.106596": {
+      "doi": "10.1016/j.jmps.2026.106596",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Uniqueness of solutions in high-energy x-ray based ‘eigenstrain tomography’ and other inverse eigenstrain problems: Counter examples and necessary conditions for well-posedness"
+    },
+    "10.1016/j.jmps.2026.106597": {
+      "doi": "10.1016/j.jmps.2026.106597",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "A multiscale investigation into the electroplastic effects in copper: Experiments and crystal plasticity modeling"
+    },
+    "10.1016/j.jmps.2026.106598": {
+      "doi": "10.1016/j.jmps.2026.106598",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "A thermodynamic framework for diffusive shells with finite deformation: application to hydrogel systems"
+    },
+    "10.1016/j.jmps.2026.106599": {
+      "doi": "10.1016/j.jmps.2026.106599",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "A unified transient network theory for viscoplastic response of dynamic polymer networks"
+    },
+    "10.1016/j.jmps.2026.106600": {
+      "doi": "10.1016/j.jmps.2026.106600",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Numerical experiments with a poro-viscoelastic continuum model for gels"
+    },
+    "10.1016/j.jmps.2026.106601": {
+      "doi": "10.1016/j.jmps.2026.106601",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Dynamic stress response kernels for dislocations and cracks: Unified anisotropic Lagrangian formulation"
+    },
+    "10.1016/j.jmps.2026.106602": {
+      "doi": "10.1016/j.jmps.2026.106602",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Structural transition paths of tungsten oxide under static and dynamic extreme conditions"
+    },
+    "10.1016/j.jmps.2026.106603": {
+      "doi": "10.1016/j.jmps.2026.106603",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Physics-informed neural network estimation of active material properties in time-dependent cardiac biomechanical models"
+    },
+    "10.1016/j.jmps.2026.106604": {
+      "doi": "10.1016/j.jmps.2026.106604",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "A numerical spectral model for shear transformation zone dynamics in heterogeneous metallic glasses"
+    },
+    "10.1016/j.jmps.2026.106605": {
+      "doi": "10.1016/j.jmps.2026.106605",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Degradation of constitutive response to mass loss: Predicting hydrolytic aging in vitrimers via reaction-modified transient network theory"
+    },
+    "10.1016/j.jmps.2026.106606": {
+      "doi": "10.1016/j.jmps.2026.106606",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Preface to the 65th anniversary issue of JMPS in honor of Pedro Ponte Castañeda"
+    },
+    "10.1016/j.jmps.2026.106607": {
+      "doi": "10.1016/j.jmps.2026.106607",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Mechanobiological morphomechanics of aneurysms"
+    },
+    "10.1016/j.jmps.2026.106608": {
+      "doi": "10.1016/j.jmps.2026.106608",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Active peridynamic method for deformation, damage and healing analysis of cell monolayers"
+    },
+    "10.1016/j.jmps.2026.106616": {
+      "doi": "10.1016/j.jmps.2026.106616",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Enhanced Poynting effect in torsion of a polydomain liquid crystal elastomer cylinder"
+    },
+    "10.1016/j.jmps.2026.106617": {
+      "doi": "10.1016/j.jmps.2026.106617",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Three-dimensional third medium contact model for hyperelastic contact and pneumatically actuated systems"
+    },
+    "10.1016/j.jmps.2026.106618": {
+      "doi": "10.1016/j.jmps.2026.106618",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Curvature-enabled topological phase transitions in curved elastic metamaterials"
+    },
+    "10.1016/j.jmps.2026.106619": {
+      "doi": "10.1016/j.jmps.2026.106619",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Finite deformation theory for growth-inspired conformal integration with programmable stress state"
+    },
+    "10.1016/j.jmps.2026.106620": {
+      "doi": "10.1016/j.jmps.2026.106620",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Symmetries of (quasi)periodic materials: Superposability vs. Indistinguishability"
+    },
+    "10.1016/j.jmps.2026.106621": {
+      "doi": "10.1016/j.jmps.2026.106621",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Torque hyperuniformity in frictional granular matter - theory and experiments"
+    },
+    "10.1016/j.jmps.2026.106624": {
+      "doi": "10.1016/j.jmps.2026.106624",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Unraveling microstructure evolution and constitutive behavior of AISI 9310 steel in ultrasonic vibration-assisted tension via combined molecular dynamics and experimental insights"
+    },
+    "10.1016/j.jmps.2026.106625": {
+      "doi": "10.1016/j.jmps.2026.106625",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Frequency-domain Bayesian inference for identifying high-dimensional nonlinear mechanical properties of heterogeneous materials"
+    },
+    "10.1016/j.jmps.2026.106626": {
+      "doi": "10.1016/j.jmps.2026.106626",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Theory-guided design of continuous-gradient architected materials: Trapping impact energy via impedance valley"
+    },
+    "10.1016/j.jmps.2026.106627": {
+      "doi": "10.1016/j.jmps.2026.106627",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "A chemo-mechanical model coupling damage and mechanofluorescence for tough interpenetrating elastomers"
+    },
+    "10.1016/j.jmps.2026.106628": {
+      "doi": "10.1016/j.jmps.2026.106628",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Frictional sliding strength of knotted and capstan configurations along the axis of a cylinder"
+    },
+    "10.1016/j.jmps.2026.106629": {
+      "doi": "10.1016/j.jmps.2026.106629",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Learning constitutive relations from experiments: II. dynamic indentation"
+    },
+    "10.1016/j.jmps.2026.106630": {
+      "doi": "10.1016/j.jmps.2026.106630",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Dynamics and modal energy analysis of periodic mechanism-based structures with elastic hinges"
+    },
+    "10.1016/j.jmps.2026.106632": {
+      "doi": "10.1016/j.jmps.2026.106632",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "The mechanics and physics of tofu: Understanding hydrated soft solids through feature networks"
+    },
+    "10.1016/j.jmps.2026.106634": {
+      "doi": "10.1016/j.jmps.2026.106634",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Thermodynamic phase-field method for simulation of cement hydration"
+    },
+    "10.1016/j.jmps.2026.106635": {
+      "doi": "10.1016/j.jmps.2026.106635",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Data-driven material identification in heterogeneous viscoelastic media"
+    },
+    "10.1016/j.jmps.2026.106636": {
+      "doi": "10.1016/j.jmps.2026.106636",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Prony series expansion of fractional operators in viscoelastic fractal ladder models"
+    },
+    "10.1016/j.jmps.2026.106637": {
+      "doi": "10.1016/j.jmps.2026.106637",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Atomistic analysis of stress-dependent activation energy and dominant factors for dislocation nucleation from planar faults in BCC metals: A comparative study to FCC metals"
+    },
+    "10.1016/j.jmps.2026.106639": {
+      "doi": "10.1016/j.jmps.2026.106639",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Hamiltonian simulation of elastodynamics on a quantum computer via energy conservation mapping"
+    },
+    "10.1016/j.jmps.2026.106647": {
+      "doi": "10.1016/j.jmps.2026.106647",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Erratum to “A continuum theory of organic mixed ionic-electronic conductors of phase separation” [Journal of the Mechanics and Physics of Solids 172 (2023) 1-28/105178]"
+    },
+    "10.1016/j.jmps.2026.106702": {
+      "doi": "10.1016/j.jmps.2026.106702",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Corrigendum to “Degradation of constitutive response to mass loss: Predicting hydrolytic aging in vitrimers via reaction-modified transient network theory” [Journal of the Mechanics and Physics of Solids 213 (2026) 106605]"
+    },
+    "10.1016/j.jmps.2026.106713": {
+      "doi": "10.1016/j.jmps.2026.106713",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Corrigendum to “Macroscale Chirality in Planar Elasticity: Predictions of Granular Micromechanics based Extended Micropolar Model Confirmed via Classical Micro Finite Element Simulations.” [Journal of the Mechanics and Physics of Solids, 214 (2026) 106664.]"
+    },
+    "10.1016/j.jmps.2026.106747": {
+      "doi": "10.1016/j.jmps.2026.106747",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Optimization-Driven Volumetric Growth in a Linearized Elasticity Framework"
+    },
+    "10.1016/j.jmps.2026.106748": {
+      "doi": "10.1016/j.jmps.2026.106748",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Hollow Needle Puncture Mechanics for Biopsy Sampling"
+    },
+    "10.1016/j.jmps.2026.106760": {
+      "doi": "10.1016/j.jmps.2026.106760",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Tensional wrinkling of thin elastic sheets with two circular holes"
+    },
+    "10.1016/j.jmps.2026.106762": {
+      "doi": "10.1016/j.jmps.2026.106762",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Microstructure-Informed Viscoelasticity for the Ascending Thoracic Aortic Wall in the Healthy and Aneurysmal State"
+    },
+    "10.1016/j.jmps.2026.106763": {
+      "doi": "10.1016/j.jmps.2026.106763",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Construction of minimal integrity bases for anisotropic hyperelasticity via structural tensors"
+    },
+    "10.1016/j.jmps.2026.106764": {
+      "doi": "10.1016/j.jmps.2026.106764",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "The mechanics of anisotropic active plates with applications to cell alignment on curved substrates"
+    },
+    "10.1016/j.jmps.2026.106765": {
+      "doi": "10.1016/j.jmps.2026.106765",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Generalizing Resistive Force Theory: Revealing and Modeling Nonlinear Intrusion Resistance in Solid-like Granular Matter"
+    },
+    "10.1016/j.jmps.2026.106768": {
+      "doi": "10.1016/j.jmps.2026.106768",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Modeling isotropic polyconvex hyperelasticity by neural networks – sufficient and necessary criteria for compressible and incompressible materials"
+    },
+    "10.1016/j.jmps.2026.106769": {
+      "doi": "10.1016/j.jmps.2026.106769",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Eulerian finite-deformation extension of Gurtin’s distortion gradient plasticity: formulation, H(curl) finite element implementation, and applications"
+    },
+    "10.1016/s0020-7683(26)00158-7": {
+      "doi": "10.1016/s0020-7683(26)00158-7",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Editorial Board"
+    },
+    "10.1016/s0020-7683(26)00190-3": {
+      "doi": "10.1016/s0020-7683(26)00190-3",
+      "date": "2026-06-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Editorial Board"
+    },
+    "10.1016/s0020-7683(26)00214-3": {
+      "doi": "10.1016/s0020-7683(26)00214-3",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Editorial Board"
+    },
+    "10.1016/s0020-7683(26)00250-7": {
+      "doi": "10.1016/s0020-7683(26)00250-7",
+      "date": "2026-07-01",
+      "journal": "International Journal of Solids and Structures",
+      "issn": "0020-7683",
+      "title": "Editorial Board"
+    },
+    "10.1016/s0022-5096(26)00113-4": {
+      "doi": "10.1016/s0022-5096(26)00113-4",
+      "date": "2026-06-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Editorial Board"
+    },
+    "10.1016/s0022-5096(26)00174-2": {
+      "doi": "10.1016/s0022-5096(26)00174-2",
+      "date": "2026-07-01",
+      "journal": "Journal of the Mechanics and Physics of Solids",
+      "issn": "0022-5096",
+      "title": "Editorial Board"
+    }
+  }
+}

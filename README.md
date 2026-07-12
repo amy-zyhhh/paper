@@ -49,6 +49,9 @@ AI 生成的中文摘要翻译
 +-- data/
 |   +-- papers.json        # 论文元数据和 Elsevier 补全信息
 |   +-- analyses.json      # AI 生成的中文摘要翻译
+|   +-- doi_index.json     # DOI 快速索引，可由 papers.json 重建
++-- config/
+|   +-- journals.json      # 多期刊配置
 +-- docs/
 |   +-- _config.yml        # Jekyll 配置
 |   +-- _layouts/          # Jekyll 页面模板
@@ -63,7 +66,9 @@ AI 生成的中文摘要翻译
 |   +-- fetch_jmps.py      # JMPS 专用抓取脚本，兼容旧流程
 |   +-- enrich_elsevier.py # 从 Elsevier 补摘要
 |   +-- analyze_papers.py  # 调用 AI 翻译摘要
+|   +-- build_doi_index.py # 根据 papers.json 重建 DOI 快速索引
 |   +-- render_md.py       # 根据 JSON 生成 Markdown 网页
+|   +-- run_all_journals.ps1 # 交互式运行所有或指定期刊
 +-- .gitignore
 +-- README.md
 ```
@@ -121,27 +126,67 @@ $env:OPENAI_MODEL="DeepSeek-V3.2-Thinking"
 cd C:\Users\zhou\Desktop\test
 ```
 
+### 多期刊配置
+
+期刊列表维护在：
+
+```text
+config/journals.json
+```
+
+每个期刊包含：
+
+```json
+{
+  "key": "jmps",
+  "name": "Journal of the Mechanics and Physics of Solids",
+  "issn": "0022-5096",
+  "aliases": ["jmps", "mechanics and physics of solids"],
+  "enabled": true
+}
+```
+
+后续新增期刊时，优先修改这个配置文件，而不是复制多条命令。
+
 ### 推荐：一键抓取、翻译并生成网页
 
-抓取 JMPS：
+推荐使用交互式多期刊脚本：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts\run_ijss_pipeline.ps1 `
-  -JournalName "Journal of the Mechanics and Physics of Solids" `
-  -Issn "0022-5096" `
-  -FromDate "2026-06-01" `
-  -UntilDate "2026-07-04" `
+powershell -ExecutionPolicy Bypass -File scripts\run_all_journals.ps1
+```
+
+运行后会要求输入：
+
+```text
+日期范围：格式为 YYYYMMDD-YYYYMMDD，例如 20260601-20260701
+期刊名：可以输入 key、别名或期刊全名，例如 jmps；直接回车表示全部启用期刊
+```
+
+日期范围包括首尾日期。如果日期范围直接回车，默认抓取“今天之前最后一周”的内容。
+
+也可以用参数直接运行全部启用期刊：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_all_journals.ps1 `
+  -DateRange "20260601-20260701"
+```
+
+只运行 JMPS：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_all_journals.ps1 `
+  -DateRange "20260601-20260701" `
+  -Journal "jmps" `
   -Limit 300
 ```
 
-抓取 IJSS：
+只运行 IJSS：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts\run_ijss_pipeline.ps1 `
-  -JournalName "International Journal of Solids and Structures" `
-  -Issn "0020-7683" `
-  -FromDate "2026-06-01" `
-  -UntilDate "2026-07-04" `
+powershell -ExecutionPolicy Bypass -File scripts\run_all_journals.ps1 `
+  -DateRange "20260601-20260701" `
+  -Journal "ijss" `
   -Limit 300
 ```
 
@@ -154,6 +199,9 @@ AI 翻译摘要
 生成 Markdown 页面和搜索索引
 Jekyll build
 ```
+
+老的单期刊脚本 `scripts\run_ijss_pipeline.ps1` 仍然可用，但后续更推荐使用
+`scripts\run_all_journals.ps1` 和 `config/journals.json`。
 
 ### 1. 抓取期刊元数据
 
@@ -543,7 +591,7 @@ docs/search.md
 docs/search-index.json
 ```
 
-如果某篇论文有 AI 分析结果，网页会在该论文下面显示 `AI Notes` 区块。
+如果某篇论文有 AI 摘要翻译结果，网页会在该论文下面显示 `AI 摘要翻译` 区块。
 搜索功能由 `docs/assets/search.js` 在浏览器端完成，不需要服务器。
 
 ## 内容安全建议
@@ -574,11 +622,8 @@ API key
 
 ```powershell
 cd C:\Users\zhou\Desktop\test
-powershell -ExecutionPolicy Bypass -File scripts\run_ijss_pipeline.ps1 `
-  -JournalName "Journal of the Mechanics and Physics of Solids" `
-  -Issn "0022-5096" `
-  -FromDate "2026-06-01" `
-  -UntilDate "2026-07-04" `
+powershell -ExecutionPolicy Bypass -File scripts\run_all_journals.ps1 `
+  -DateRange "20260601-20260701" `
   -Limit 300
 cd docs
 bundle exec jekyll serve

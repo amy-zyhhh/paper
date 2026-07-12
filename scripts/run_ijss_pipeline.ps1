@@ -92,6 +92,7 @@ python scripts\fetch_crossref.py `
   --from-date $FromDate `
   --until-date $UntilDate `
   --limit $Limit
+python scripts\build_doi_index.py
 
 Write-Host "== Step 2/6: Enrich with Elsevier abstracts only ==" -ForegroundColor Cyan
 $elsevierArgs = @(
@@ -124,6 +125,7 @@ if ($OverwriteAnalysis) {
   $analysisArgs += "--overwrite"
 }
 python @analysisArgs
+python scripts\build_doi_index.py
 
 Write-Host "== Step 4/6: Render Jekyll Markdown pages and search index ==" -ForegroundColor Cyan
 python scripts\render_md.py
